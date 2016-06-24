@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>陈方旭-personal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="陈方旭，个人网站，交互，html5，js">
+    <meta name="description" content="这是一个充分展现业务技能的个人网站，其中包括原生js和js高级应用，html5和css3。">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css">
+    <base target="_blank">
+    <script src="js/cTween.js"></script>
+    <!--<script src="js/first.js"></script>-->
+</head>
+<body>
+<section id="start" style="display: none">
+    <div id="galaxyBox">
+        <div id="galaxy">
+            <div class="partLeft partAll">
+                <img src="images/panorama-left.jpg" alt="">
+            </div>
+            <div class="partAfter partAll">
+                <img src="images/panorama-back.jpg" alt="">
+            </div>
+            <div class="partRight partAll">
+                <img src="images/panorama-right.jpg" alt="">
+            </div>
+            <div class="partFront partAll">
+                <img src="images/panorama-front.jpg" alt="">
+            </div>
+            <div class="partUp partAll">
+                <img src="images/panorama-up.jpg" alt="">
+            </div>
+            <div class="partDown partAll">
+                <img src="images/panorama-down.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="change">
+        <a href="javascript:;" class="aBtn">
+            <b class="one"></b>
+            <b class="two"></b>
+            <b class="three"></b>
+            <b class="four"></b>
+            <span class="text">点 击 继 续</span>
+        </a>
+    </div>
+    <div id="cover"></div>
+    <div id="comet">
+        <img src="images/huixing.png" alt="">
+    </div>
+    <div id="content">
+        <div class="text">
+            <p class="language">星 海 茫 茫 如 人 海 茫 茫</p>
+            <p class="language">信 任 源 于 了 解</p>
+            <div class="btn">
+                <a href="javascript:;" class="aBtn">点 我 了 解</a>
+            </div>
+        </div>
+    </div>
+</section>
+<header>
+    <div id="headerBox" class="clearFix">
+        <h1>陈方旭个人网站</h1>
+        <nav id="headNav" class="clearFix">
+            <a href="javascript:;" class="headNav-link" id="hover">简介</a>
+            <a href="javascript:;" class="headNav-link">技能</a>
+            <a href="javascript:;" class="headNav-link">案例</a>
+            <a href="javascript:;" class="headNav-link">练习</a>
+            <span id="navLine"></span>
+        </nav>
+    </div>
+</header>
+<section id="main">
+    <!--第一页-->
+    <section id="pageOne" class="page-all">
+        <canvas id="oneCanvas"></canvas>
+        <div class="content">
+            <p></p>
+        </div>
+    </section>
+    <!--第二页-->
+    <section id="pageTwo" class="page-all">
+        <ul id="bgList">
+            <li id="bg3"></li>
+            <li id="bg2"></li>
+            <li id="bg1"></li>
+            <li id="bg0"></li>
+        </ul>
+        <div id="state">
+            <div id="page0" class="status1">
+                <div class="glow">
+                    <img src="images/page0_glow.png" alt="">
+                </div>
+                <div class="content">
+                    <ul id="page0_list">
+                        <li class="list_three">
+                            <img src="images/page0_1.png" alt="">
+                        </li>
+                        <li class="list_four">
+                            <img src="images/js.jpg" alt="">
+                        </li>
+                        <li class="list_one">
+                            <img src="images/better.png" alt="">
+                        </li>
+                        <li class="list_two">
+                            <img src="images/better_title.png" alt="">
+                        </li>
+                        <li></li>
+                    </ul>
+                    <div id="page0_round">
+                        <img src="images/ttround.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="page1" class="status0">
+                <div class="glow">
+                    <img src="images/page1_glow.png" alt="">
+                </div>
+                <div class="main">
+                    <ul class="list">
+                        <li class="page1-1">
+                            <img src="images/page1_1.png" alt="">
+                        </li>
+                        <li class="page1-2">
+                            <img src="images/page1_2.png" alt="">
+                        </li>
+                        <li class="page1-3">
+                            <img src="images/page1_3.png" alt="">
+                        </li>
+                        <li class="page1-4">
+                            <img src="images/page1_4.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="line-box">
+                    <div class="line">
+                        <img src="images/lineglow.png" alt="">
+                    </div>
+                </div>
+                <div class="title">
+                    <span>
+                        <img src="images/page1_title.png" alt="">
+                    </span>
+                    <h3>精通ES5，了解ES6</h3>
+                    <h3>了解Node.js，并不断学习中</h3>
+                </div>
+            </div>
+            <div id="page2" class="status0">
+                <div class="glow">
+                    <img src="images/page2_glow.png" alt="">
+                </div>
+                <div class="logo">
+                    <img src="images/html5.png" alt="">
+                </div>
+                <div class="title">
+                    <img src="images/page2_title.png" alt="">
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="page2_1">
+                            <img src="images/page2_ttround.png" alt="">
+                        </li>
+                        <li class="page2_2">
+                            <img src="images/page2_ttround.png" alt="">
+                        </li>
+                        <li class="page2_3">
+                            <img src="images/page2_ttround.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="page3" class="status0">
+                <div class="glow">
+                    <img src="images/page3_glow.png" alt="">
+                </div>
+                <div class="line">
+                    <div class="top">
+                        <span>
+                            <img src="images/lineglow.png" alt="">
+                        </span>
+                    </div>
+                    <div class="bottom">
+                        <span>
+                            <img src="images/lineglow.png" alt="">
+                        </span>
+                    </div>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="list_one">
+                            <img src="images/page4_1.png" alt="">
+                        </li>
+                        <li class="list_two">
+                            <img src="images/page4_2.png" alt="">
+                        </li>
+                        <li class="list_three">
+                            <img src="images/page4_3.png" alt="">
+                        </li>
+                        <li class="list_four">
+                            <img src="images/page4_4.png" alt="">
+                        </li>
+                        <li class="list_five">
+                            <img src="images/page4_5.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="title">
+                    <img src="images/page3_title.png" alt="">
+                    <p>精通原生JavaScript</p>
+                    <p>熟练运用JQ极速开发</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--第三页-->
+    <section id="pageThree" class="page-all"></section>
+    <!--第四页-->
+    <section id="pageFour" class="page-all"></section>
+</section>
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
