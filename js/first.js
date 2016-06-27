@@ -58,6 +58,8 @@ window.onload = function (){
     //点击出现流星，流星划过后，背景图渐隐，首页出现
     aBtn.addEventListener('click',function(){
         var comet = document.getElementById('comet');
+        var main = document.getElementById('main');
+        var header = document.getElementById('header');
         text.style.display = "none";
         var obj = {
             element: comet,
@@ -72,8 +74,10 @@ window.onload = function (){
             type: "linear",
             callBack: function (){
                 start.style.display = "none";
+                main.style.display = "block";
+                header.style.display = "block";
                 clearTimeout(start.timer);
-                pageOneCanvas();
+                pageOneCavans();
             }
         };
         cTween(obj);
@@ -139,3 +143,178 @@ window.onload = function (){
         },90);
     }
 };
+
+//画布运动
+function pageOneCavans(){
+    var width, height, canvas, ctx, points, target, animateOff = true;
+    init();
+    initAnimate();
+    addListener();
+
+    //初始化函数
+    function init(){
+        width = window.innerWidth;
+        height = window.innerHeight;
+        target = {
+            x: width/2,
+            y: height/2
+        };
+        canvas = document.getElementById('oneCanvas');
+        canvas.width = width;
+        canvas.height = height;
+        ctx = canvas.getContext('2d');
+        points = [];
+        for(var x = 0; x < width; x += width/20){
+            for(var y = 0; y < height; y += height/20){
+                var px = x + Math.ceil(Math.random()*width/20);
+                var py = y + Math.ceil(Math.random()*height/20);
+                points.push({x: px, originX: px, y: py, originY: py})
+            }
+        }
+        for(var i = 0; i < points.length; i++){
+            var closest = [];
+            var p1 = points[i];
+            for(var j = 0; j < points.length;j++){
+                var p2 = points[j];
+                if(p1 != p2){
+                    var off = false;
+                    //找到5个点，放到closest数组中
+                    for(var k = 0; k < 5; k++){
+                        if(!off){
+                            if(!closest[k]){
+                                closest[k] = p2;
+                                off = true;
+                            }
+                        }
+                    }
+                    //再遍历剩下的各个点，如果有比之前5个近的，就把原来的替换掉
+                    for(var k = 0; k < 5; k++){
+                        if(!off){
+                            if(getDistance(p1,p2) < getDistance(p1,closest[k])){
+                                closest[k] = p2;
+                                off = true;
+                            }
+                        }
+                    }
+                }
+            }
+            p1.closest = closest;
+        }
+        for(var i in points){
+            var c = new Circle(points[i],2*Math.random()*2);
+            points[i].Circle = c;
+        }
+    }
+
+    //运动有关
+    //加入缓动的运动函数
+    function initAnimate(){
+        animate();
+        for(var i in points){
+            changePoint(points[i]);
+        }
+    }
+    //运动的函数
+    function animate(){
+        if(animateOff){
+            ctx.clearRect(0,0,width,height);
+            for(var i in points){
+                if(Math.abs(getDistance(points[i],target)) < 4000){
+                    points[i].active = 0.3;
+                    points[i].Circle.active = 0.6;
+                }else  if(Math.abs(getDistance(points[i],target)) < 20000) {
+                    points[i].active = 0.1;
+                    points[i].Circle.active = 0.3;
+                }else  if(Math.abs(getDistance(points[i],target)) < 40000) {
+                    points[i].active = 0.02;
+                    points[i].Circle.active = 0.1;
+                }else {
+                    points[i].active = 0;
+                    points[i].Circle.active = 0;
+                }
+                drawLine(points[i]);
+                points[i].Circle.draw();
+            }
+        }
+        requestAnimationFrame(animate);
+    }
+
+    //缓动函数，实现动画
+    function changePoint(p){
+        TweenLite.to(p,1+1*Math.random(), {x:p.originX-50+Math.random()*100,
+            y: p.originY-50+Math.random()*100, ease:Tween.easeInOut,
+            onComplete: function() {
+                changePoint(p);
+            }})
+    }
+
+    //事件有关
+    //添加事件
+    function addListener(){
+        pageOne.addEventListener('mousemove',move);
+        addWheel(main,function (down){
+            scrollCheck();
+        });
+        window.addEventListener('resize',resize);
+    }
+    //鼠标移动，重新获取中心点
+    function move(e){
+        var curx = cury = 0;
+        if(e.pageX){
+            curx = e.pageX;
+            cury = e.pageY;
+        }else if(e.clientX){
+            curx = e.clientX;
+            cury = e.clientY;
+        }
+        target.x = curx;
+        target.y = cury;
+    }
+    //滚动检查
+    function scrollCheck(){
+        if(nub != 0){
+            animateOff = false;
+        }else {
+            animateOff = true;
+        }
+    }
+    //浏览器窗口改变时的函数
+    function resize(){
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+
+    //画布有关
+    //drawLine函数
+    function drawLine(p){
+        if(!p.active) return;
+        ctx.beginPath();
+        for(var i in p.closest){
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.closest[i].x, p.closest[i].y);
+            ctx.strokeStyle = 'rgba(226,252,236,'+ p.active+')';
+            ctx.stroke();
+        }
+    }
+
+    //构造一个Circle函数
+    function Circle(position,radius){
+        this.position = position || 0;
+        this.radius = radius || 0;
+        this.draw = function (){
+            if(!this.active) return;
+            ctx.beginPath();
+            ctx.arc(this.position.x,this.position.y,this.radius,0,2*Math.PI,false);
+            ctx.fillStyle = 'rgba(226,252,236,'+ this.active+')';
+            ctx.fill();
+        };
+    }
+
+
+    //找最近点函数
+    function getDistance(p1,p2){
+        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y,2);
+    }
+}

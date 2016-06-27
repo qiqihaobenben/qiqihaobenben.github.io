@@ -274,6 +274,18 @@ a {
     content: "";
     clear: both;
 }
+.gray {
+    background-color: #f9f9f9;
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.9),rgba(243,243,243,.9));
+    background-image: linear-gradient(rgba(255,255,255,.9),rgba(243,243,243,.9));
+    border-bottom: 1px solid #e5e5e5;
+}
+.brown {
+    background-color: #b9b9a4;
+    background-image: -webkit-linear-gradient(rgba(199,186,186,.9),rgba(180,156,156,.9));
+    background-image: linear-gradient(rgba(199,186,186,.9),rgba(180,156,156,.9));
+    border-bottom: 1px solid #080000;
+}
 /*首屏展示*/
 
 #start {
@@ -476,7 +488,8 @@ a {
 }
 
 /*导航开始*/
-header {
+#header {
+    display: none;
     position: absolute;
     left:0;
     top: 0;
@@ -493,7 +506,6 @@ header {
     padding: 0 150px 0 150px;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.6);
     transform-style: preserve-3d;
     transform-origin: center center -15px;
     transform: rotateX(0deg);
@@ -517,7 +529,7 @@ h1 {
     height: 70px;
     font: 15px / 70px "微软雅黑";
     text-align: center;
-    color: #fff;
+    color: #e5e5e5;
 }
 
  #navLine {
@@ -534,6 +546,7 @@ h1 {
 }
 /*导航结束*/
 #main {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -979,12 +992,159 @@ h1 {
 
 /*第三页开始*/
 #pageThree {
-    background: yellow;
+    position: relative;
+    overflow: hidden;
+    background: url("../images/bg-gray.jpg") no-repeat fixed center center;
+    perspective: 800px;
+}
+#pageThree div {
+    position: absolute;
+}
+#pageThree .p1 {
+    top: 400px;
+    left: 40px;
+    width: 267px;
+    height: 246px;
+}
+#pageThree .p2 {
+    top: 40px;
+    left: 200px;
+    width: 167px;
+    height: 129px;
+}
+#pageThree .p3 {
+    top: 200px;
+    right: 400px;
+    width: 61px;
+    height: 66px;
+}
+#pageThree .p4 {
+    top: 170px;
+    right: 325px;
+    width: 76px;
+    height: 75px;
+}
+#pageThree .p5 {
+    top: 140px;
+    right: 250px;
+    width: 93px;
+    height: 87px;
+}
+#pageThree .p6 {
+    top: 200px;
+    right: 150px;
+    width: 159px;
+    height: 159px;
+}
+#pageThree .p7 {
+    top: 80px;
+    right: 10px;
+    width: 251px;
+    height: 240px;
+}
+#pageThree .p8 {
+    top: 20px;
+    left: 675px;
+    width: 162px;
+    height: 172px;
+}
+#listBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -400px;
+    margin-top: -120px;
+    width: 800px;
+    height: 450px;
+    background: url("../images/strengths-ct.png") no-repeat 0 0 / contain;
+    transform-style: preserve-3d;
+    transform-origin: center center 0px;
+    transition: all 0.3s linear;
+}
+#listBox .content {
+    position: absolute;
+    left: 150px;
+    top: 36px;
+    width: 508px;
+    height: 316px;
+}
+#listBox .content li {
+    float: left;
+    width: 253px;
+    height: 157px;
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+    transition: all 0.3s linear;
+}
+#listBox .content a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 30px 10px;
+    width: 100%;
+    height: 100%;
+    color: #666;
+}
+#listBox .content i {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+}
+#listBox .content h3 {
+    font: 14px / 40px "微软雅黑",arial;
+    line-height: 40px;
+    text-align: center;
+}
+#listBox .link1 i {
+    background: url("../images/1.png") no-repeat center center;
+}
+#listBox .link2 i {
+    background: url("../images/2.png") no-repeat center center;
+}
+#listBox .link3 i {
+    background: url("../images/3.png") no-repeat center center;
+}
+#listBox .link4 i {
+    background: url("../images/4.png") no-repeat center center;
 }
 /*第三页结束*/
 
+
 /*第四页开始*/
 #pageFour {
-    background: blue;
+    overflow: hidden;
+    background: #160000;
+}
+#pageFour .bg {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 35px;
+    width: 100%;
+    height: 100%;
+    background: url("../images/contact-bg.jpg") no-repeat center center;
+    perspective: 1000px;
+}
+#pageFour .call {
+    position: absolute;
+    right: 30px;
+    top: -40px;
+    width: 158px;
+    height: 559px;
+    opacity: 0;
+}
+#pageFour .content {
+    position: absolute;
+    left: 740px;
+    bottom: -300px;
+    padding: 200px 50px;
+    width: 360px;
+    height: 400px;
+    background: url("../images/letter.png") no-repeat 0 0;
+    opacity: 0;
+    transform-style: preserve-3d;
+    transform: translateZ(-200px);
+}
+#pageFour .content p {
+    padding: 10px 30px;
+    font: 18px / 40px "微软雅黑";
 }
 /*第四页结束*/

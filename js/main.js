@@ -56,7 +56,7 @@ window.addEventListener('resize',windowResize);
         };
 })();
 //画布运动
-function pageOneCvanas(){
+function pageOneCavans(){
     var width, height, canvas, ctx, points, target, animateOff = true;
     init();
     initAnimate();
@@ -181,14 +181,7 @@ function pageOneCvanas(){
         target.x = curx;
         target.y = cury;
     }
-    //滚动检查
-    function scrollCheck(){
-        if(nub != 0){
-            animateOff = false;
-        }else {
-            animateOff = true;
-        }
-    }
+
     //浏览器窗口改变时的函数
     function resize(){
         width = window.innerWidth;
@@ -338,14 +331,143 @@ headNav.addEventListener('mouseout',navOut);
 for(var i = 0; i < navLink.length; i++){
     navLink[i].addEventListener('click',navLinkClick)
 }
+//第三页操作
+function pageThree(){
+    var off = true;
+    var pageThree = document.getElementById("pageThree");
+    var listBox = document.getElementById("listBox");
+    var divs = pageThree.children;
+    console.log(divs.length)
+    var p1 = document.getElementsByClassName("p1")[0];
+    var p2 = document.getElementsByClassName("p2")[0];
+    var p3 = document.getElementsByClassName("p3")[0];
+    var p4 = document.getElementsByClassName("p4")[0];
+    var p5 = document.getElementsByClassName("p5")[0];
+    var p6 = document.getElementsByClassName("p6")[0];
+    var p7 = document.getElementsByClassName("p7")[0];
+    var p8 = document.getElementsByClassName("p8")[0];
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var lis = listBox.getElementsByTagName('li');
+    var arrW = [10,30,50,70];
+    for(var i = 0; i < divs.length - 1; i++){
+            var left = divs[i].offsetLeft;
+            var top = divs[i].offsetTop;
+        console.log(top)
+            divs[i].style.right = 0;
+            divs[i].style.left = left + "px";
+            divs[i].style.top = top + "px";
+            divs[i].indexW = left;
+            divs[i].indexH = top;
+    }
+
+    pageThree.onmousemove = function (ev) {
+        var e = window.event || ev;
+        var scale = 0.5 - (e.clientX / w);
+        var scaleY = 0.5 - (e.clientY / h);
+        p1.style.left = parseFloat(p1.indexW) + arrW[3]*scale + "px";
+        p1.style.top = parseFloat(p1.indexH) + arrW[3]*scaleY + "px";
+        p2.style.left = parseInt(p2.indexW) + arrW[1]*scale + "px";
+        p2.style.top = parseInt(p2.indexH) + arrW[1]*scaleY + "px";
+        p3.style.left = parseInt(p3.indexW) + arrW[0]*scale + "px";
+        p3.style.top = parseInt(p3.indexH) + arrW[0]*scaleY + "px";
+        p4.style.left = parseInt(p4.indexW) + arrW[1]*scale + "px";
+        p4.style.top = parseInt(p4.indexH) + arrW[1]*scaleY + "px";
+        p5.style.left = parseInt(p5.indexW) + arrW[1]*scale + "px";
+        p5.style.top = parseInt(p5.indexH) + arrW[1]*scaleY + "px";
+        p6.style.left = parseInt(p6.indexW) + arrW[2]*scale + "px";
+        p6.style.top = parseInt(p6.indexH) + arrW[2]*scaleY + "px";
+        p7.style.left = parseInt(p7.indexW) + arrW[3]*scale + "px";
+        p7.style.top = parseInt(p7.indexH) + arrW[3]*scaleY + "px";
+        p8.style.left = parseInt(p8.indexW) + arrW[1]*scale + "px";
+        p8.style.top = parseInt(p8.indexH) + arrW[1]*scaleY + "px";
+        if(off){
+            listBox.style.transform = 'rotateX('+arrW[1] * scaleY/2+'deg) rotateY('+arrW[0] * scale+'deg)';
+        }
+    };
+    listBox.onmousemove = function (){
+        off = false;
+        listBox.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    };
+    listBox.onmouseout = function (){
+        off = true;
+    };
+    for(var i = 0; i < lis.length; i++){
+        lis[i].onmouseenter = function (){
+            this.style.background = "red";
+            this.style.transform = 'scale(1.1)';
+            this.style.boxShadow = '0 0 20px #333';
+        };
+        lis[i].onmouseleave = function (){
+            this.style.background = "";
+            this.style.transform = '';
+            this.style.boxShadow = '';
+        };
+    }
+}
+
+//第四页操作
+var off = true;
+function pageFour(){
+    var pageFour = document.getElementById('pageFour');
+    var text = pageFour.getElementsByClassName('content')[0];
+    var ps = text.getElementsByTagName('p');
+    var str = '电话：13522216755 Email: chenfangxu_qixin@163.com 地址：北京海淀区圆明园东里社区';
+    var timer = null;
+    var number = -1;
+    var content = {
+        element: text,
+        time: 500,
+        target: {
+            opacity: 100,
+            bottom: -230
+        },
+        type: 'easeBoth',
+        callBack: function (){
+            console.log(text)
+            if(off){
+                off = false;
+                timer = setInterval(function (){
+                    number++;
+                    if(number >= str.indexOf('地')){
+                        ps[2].innerHTML += str.charAt(number);
+                    }else if(number >= str.indexOf('E')){
+                        ps[1].innerHTML += str.charAt(number);
+                    }else {
+                        ps[0].innerHTML += str.charAt(number);
+                    }
+                    if(number == str.length){
+                        clearInterval(timer);
+                    }
+                },50)
+            }
+        }
+    };
+    var call = {
+        element: document.getElementsByClassName('call')[0],
+        time: 500,
+        target: {
+            opacity: 100,
+            top: 0
+        },
+        type: 'elasticOut',
+        callBack: function (){
+            cTween(content);
+        }
+    };
+    cTween(call);
+}
 
 
 
-
-
-
-
-
+//滚动检查
+function scrollCheck(){
+    if(nub != 0){
+        animateOff = false;
+    }else {
+        animateOff = true;
+    }
+}
 //封装滚轮事件函数
 function addWheel(obj,fn){
     var types = window.navigator.userAgent.toLowerCase();
@@ -411,6 +533,15 @@ function rotate(deg,value,bl){
                 clearInterval(timer);
                 //导航旋转重新恢复到初始状态时，才可以进行翻页
                 mainOff = true;
+                //如果是倒数第二页
+                //如果是最后一页
+                if(nub == 0){
+                    pageOneCavans();
+                }else if (nub == 2){
+                    pageThree();
+                }else if(nub == 3){
+                    pageFour();
+                }
             }
         }
 
@@ -475,6 +606,7 @@ function navLinkClick(){
     navLineScroll();
     rotate(15,1,true);
     pageScroll(main);
+    scrollCheck();
 }
 
 //第二页技能展示相关函数
