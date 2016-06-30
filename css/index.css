@@ -1,3 +1,4 @@
+
 @keyframes page0_round {
     0%{
         transform: rotateZ(0deg);
@@ -286,8 +287,18 @@ a {
     background-image: linear-gradient(rgba(199,186,186,.9),rgba(180,156,156,.9));
     border-bottom: 1px solid #080000;
 }
+/*loading页面开始*/
+#loading {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg,#9db5f5 40%,#273e60 100%);
+    transition: all 1s linear;
+    perspective: 800px;
+}
+    /*loading页面结束*/
 /*首屏展示*/
-
 #start {
     overflow: hidden;
     position: relative;
@@ -561,11 +572,49 @@ h1 {
 #pageOne {
     background: url("../images/blue-bg.jpg") no-repeat fixed center center / cover;
 }
+#pageOne .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -300px;
+    width: 600px;
+    height: 600px;
+}
+#pageOne .personText {
+    position: absolute;
+    left: 0;
+    top: 350px;
+    width: 100%;
+    opacity: 0;
+}
+#pageOne .content p {
+    width: 100%;
+    height: 40px;
+    font: 18px / 40px Arial,"微软雅黑";
+    text-align: center;
+    color: #222;
+}
+#pageOne .content .name {
+    position: absolute;
+    left: 0;
+    top: 300px;
+    opacity: 0;
+}
 /*第一页结束*/
 
 /*第二页开始*/
 #pageTwo {
     position: relative;
+}
+#pageTwo .nextBtn {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: 15px;
+    width: 30px;
+    height: 32px;
+    cursor: pointer;
 }
 #bgList {
     position: absolute;
@@ -649,7 +698,7 @@ h1 {
     margin-top: -340px;
     perspective: 1000px;
 }
-#page0_list {
+#page0.status1  #page0_list {
     position: absolute;
     top:0;
     left:0;
@@ -692,7 +741,7 @@ h1 {
     transform: translateX(470px) translateZ(-950px) rotateY(180deg);
 }
 
-#page0_round {
+#page0.status1  #page0_round {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -702,7 +751,7 @@ h1 {
     margin-top: -340px;
     animation: page0_round_box 40s linear 0s infinite;
 }
-#page0_round img {
+#page0.status1  #page0_round img {
     transform-origin: center center 200px;
     animation: page0_round 4s linear 0s infinite;
 }
@@ -718,9 +767,11 @@ h1 {
 
 #page1.status0 {
     opacity: 0;
+
 }
 #page1.status1 {
     opacity: 1;
+    transition: all 0.3s linear;
 }
 
 #page1.status1 .glow {
@@ -740,12 +791,30 @@ h1 {
     height: 1px;
     background: #f6ff00;
 }
+#page1.status0 .line {
+    position: absolute;
+    left:200px;
+    top: 50%;
+    margin-top: -62px;
 
+}
 #page1.status1 .line {
     position: absolute;
     left:600px;
     top: 50%;
     margin-top: -62px;
+    transition: all 0.5s linear 0.3s;
+}
+#page1.status0 .page1-1 {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    width: 350px;
+    height: 350px;
+    transform: rotateY(0deg) translateZ(-100px) scale(0.7);
+
 }
 #page1.status1 .page1-1 {
     position: absolute;
@@ -756,6 +825,18 @@ h1 {
     width: 350px;
     height: 350px;
     transform: rotateY(-30deg) translateZ(-100px) scale(0.7);
+    transition: all 0.6s linear 0.5s;
+}
+#page1.status0 .page1-2 {
+    position: absolute;
+    left: 170px;
+    top: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    width: 350px;
+    height: 350px;
+    transform: rotateY(-0deg) translateZ(-100px) scale(0.8);
+
 }
 #page1.status1 .page1-2 {
     position: absolute;
@@ -767,6 +848,18 @@ h1 {
     height: 350px;
     transform: rotateY(-30deg) translateZ(-100px) scale(0.8);
     animation: page1_1 2s linear 0s infinite;
+    transition: all 0.5s linear 0.8s;
+}
+#page1.status0 .page1-3 {
+    position: absolute;
+    left: 250px;
+    top: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    width: 350px;
+    height: 350px;
+    transform: rotateY(0deg) translateZ(-100px) scale(1);
+
 }
 #page1.status1 .page1-3 {
     position: absolute;
@@ -778,6 +871,18 @@ h1 {
     height: 350px;
     transform: rotateY(-30deg) translateZ(-100px) scale(1);
     animation: page1_23 1s linear 0s infinite;
+    transition: all 0.4s linear 0.8s;
+}
+#page1.status0 .page1-4 {
+    position: absolute;
+    left: 300px;
+    top: 50%;
+    margin-top: -175px;
+    margin-left: -175px;
+    width: 350px;
+    height: 350px;
+    transform: rotateY(0deg) translateZ(-100px) scale(1);
+
 }
 #page1.status1 .page1-4 {
     position: absolute;
@@ -789,6 +894,16 @@ h1 {
     height: 350px;
     transform: rotateY(-30deg) translateZ(-100px) scale(1);
     animation: page1_23 3s linear 0s infinite;
+    transition: all 0.3s linear 0.8s;
+}
+#page1.status0 .title {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -180px;
+    width: 360px;
+    height: 100px;
 }
 #page1.status1 .title {
     position: absolute;
@@ -798,6 +913,7 @@ h1 {
     margin-left: -180px;
     width: 360px;
     height: 100px;
+    transition: all 0.6s linear 0.8s;
 }
 #page1 .title h3 {
     font-weight: 400;
@@ -810,6 +926,7 @@ h1 {
 }
 #page2.status1 {
     opacity: 1;
+    transition: all 0.3s linear;
 }
 #page2.status1 .glow {
     position: absolute;
@@ -818,22 +935,48 @@ h1 {
     margin-left: -700px;
     margin-top: -530px;
 }
+#page2.status0 .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    transform: scale(3);
+}
 #page2.status1 .logo {
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -60px;
     margin-top: -60px;
+    transform: scale(1);
+    transition: all 1s linear 0.3s;
 }
 #page2 .logo img {
     width: 120px;
     height: 120px;
+}
+#page2.status0 .title {
+    position: absolute;
+    left: 700px;
+    top: 240px;
+    transform: translateZ(-600px) rotateY(-30deg);
 }
 #page2.status1 .title {
     position: absolute;
     left: 500px;
     top: 240px;
     transform: translateZ(-600px) rotateY(-30deg);
+    transition: all 0.3s linear 1.3s;
+}
+#page2.status0 .main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+    width: 500px;
+    height: 500px;
 }
 #page2.status1 .main {
     position: absolute;
@@ -884,6 +1027,7 @@ h1 {
 }
 #page3.status1 {
     opacity: 1;
+    transition: all 0.3s linear;
 }
 #page3.status1 .glow {
     position: absolute;
@@ -994,7 +1138,7 @@ h1 {
 #pageThree {
     position: relative;
     overflow: hidden;
-    background: url("../images/bg-gray.jpg") no-repeat fixed center center;
+    background: url("../images/bg-gray.jpg") no-repeat center center;
     perspective: 800px;
 }
 #pageThree div {

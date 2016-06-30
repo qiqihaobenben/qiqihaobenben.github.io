@@ -5,7 +5,7 @@
  */
 // JavaScript Document
 
-
+var oneTimer = null;
 var nub = 0;
 var num = 0;
 var main = document.getElementById('main');
@@ -30,7 +30,7 @@ var pages = state.children;
 window.addEventListener('resize',windowResize);
 
 //第一页canvas动画效果
-//requestAnimationFrame兼容问题解决
+//requestAnimationFrame兼容问题解决,效果是不错，但是我的电脑cpu是1.6的，使用率达到90%以上，体验很不好，改用间隔定时器
 (function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
@@ -120,7 +120,9 @@ function pageOneCavans(){
     //运动有关
     //加入缓动的运动函数
     function initAnimate(){
-        animate();
+        //animate();
+        clearInterval(oneTimer);
+        oneTimer = setInterval(animate,100);
         for(var i in points){
             changePoint(points[i]);
         }
@@ -147,7 +149,7 @@ function pageOneCavans(){
                 points[i].Circle.draw();
             }
         }
-        requestAnimationFrame(animate);
+        //requestAnimationFrame(animate);
     }
 
     //缓动函数，实现动画
@@ -181,7 +183,13 @@ function pageOneCavans(){
         target.x = curx;
         target.y = cury;
     }
-
+    function scrollCheck(){
+        if(nub != 0){
+            animateOff = false;
+        }else {
+            animateOff = true;
+        }
+    }
     //浏览器窗口改变时的函数
     function resize(){
         width = window.innerWidth;
@@ -331,6 +339,17 @@ headNav.addEventListener('mouseout',navOut);
 for(var i = 0; i < navLink.length; i++){
     navLink[i].addEventListener('click',navLinkClick)
 }
+
+//给第二页下方小按钮添加点击事件
+var nextBtn = pageTwo.getElementsByClassName('nextBtn')[0];
+nextBtn.onclick = function (){
+    nub++;
+    navLineScroll();
+    rotate(15,1,true);
+    pageScroll(main);
+    scrollCheck();
+};
+
 //第三页操作
 function pageThree(){
     var off = true;
@@ -424,7 +443,6 @@ function pageFour(){
         },
         type: 'easeBoth',
         callBack: function (){
-            console.log(text)
             if(off){
                 off = false;
                 timer = setInterval(function (){

@@ -9,11 +9,41 @@
     <meta name="description" content="这是一个充分展现业务技能的个人网站，其中包括原生js和js高级应用，html5和css3。">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <style>
+        @keyframes loading {
+            0%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            50% {
+                transform: rotateX(0deg) rotateY(180deg);
+            }
+            100% {
+                transform: rotateX(180deg) rotateY(180deg);
+            }
+        }
+        #loading .loadingImg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            margin-left: -50px;
+            margin-top: -50px;
+            transform-style: preserve-3d;
+            /*transform-origin: center center 200px;*/
+            animation: loading 2s linear infinite;
+        }
+    </style>
     <link rel="stylesheet" href="css/index.css">
     <base target="_blank">
     <script src="js/cTween.js"></script>
 </head>
 <body>
+<div id="loading">
+    <div class="loadingImg">
+        <img src="images/loading.png" alt="">
+    </div>
+</div>
 <section id="start">
     <div id="galaxyBox">
         <div id="galaxy">
@@ -78,7 +108,12 @@
     <section id="pageOne" class="page-all">
         <canvas id="oneCanvas"></canvas>
         <div class="content">
-            <p></p>
+            <p class="name">姓名： 陈方旭</p>
+            <div class="personText">
+                <p>良好的自学能力，有独立解决问题的思考能力</p>
+                <p>规范的代码编写，写出的代码人类可读</p>
+                <p>浓厚的编程兴趣，计算机比人类单纯</p>
+            </div>
         </div>
     </section>
     <!--第二页-->
@@ -214,6 +249,9 @@
                 </div>
             </div>
         </div>
+        <div class="nextBtn">
+            <img src="images/click.png" alt="">
+        </div>
     </section>
     <!--第三页-->
     <section id="pageThree" class="page-all">
@@ -245,13 +283,13 @@
             <div class="content">
                 <ul class="clearFix">
                     <li>
-                        <a href="#" class="link1">
+                        <a href="responsive/xiangyingshi_1feel.html" class="link1">
                             <i></i>
                             <h3>响应式开发</h3>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="link2">
+                        <a href="beaut/beaut.html" class="link2">
                             <i></i>
                             <h3>电商网站demo</h3>
                         </a>
@@ -263,7 +301,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="link4">
+                        <a href="moblie/xiachufang.html" class="link4">
                             <i></i>
                             <h3>移动端开发</h3>
                         </a>
@@ -287,9 +325,8 @@
     </section>
 </section>
 
-<script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/TweenLite.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/first.js"></script>
+<script src="js/first.js" defer="defer"></script>
 </body>
 </html>

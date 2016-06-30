@@ -3,8 +3,15 @@
  * Created by Administrator on 2016/6/4.
  */
 window.onload = function (){
+    console.log('****又来看我的控制台啦？！！还不赶紧打电话邀约!****');
+    console.log('**********代码风骚，乐于学习，不怕BUG**************');
+    console.log('********************姓名：陈方旭*******************');
+    console.log('*********邮箱：chenfangxu_qixin.163.com************');
+    console.log('******************电话：13522216755****************');
+    var oneTimer = null;
     var w = window.innerWidth;
     var h = window.innerHeight;
+    var loading = document.getElementById('loading');
     var start= document.getElementById('start');
     var straBox = document.getElementById('galaxyBox');
     var change = document.getElementById('change');
@@ -13,7 +20,14 @@ window.onload = function (){
     var cover = document.getElementById('cover');
     var text = document.getElementById('content');
     var aBtn = text.getElementsByTagName('a')[0];
-
+    //loading页面结束
+        loading.style.opacity = 0;
+        loading.style.animation = '';
+        loading.timer = setTimeout(function (){
+            loading.style.display = 'none';
+            clearTimeout(loading.timer);
+        },1000);
+    //判断浏览器是不是IE，如果是IE取消星空转动效果
     var user = window.navigator.userAgent.toLowerCase();
     if(user.indexOf('trident') != -1 ){
         straBox.style.display = "none";
@@ -23,7 +37,7 @@ window.onload = function (){
         //星空转动
         var deg = -90;
         var starWind = document.getElementById('galaxy');
-        starWindRound(0.2,360);
+        starWindRound(0.2,90);
 
         //鼠标移入,鼠标点击继续，显示背景图
         btn.addEventListener('mouseenter',function (){
@@ -39,7 +53,7 @@ window.onload = function (){
             bs[3].style.width = 0+"px";
         },false);
         btn.addEventListener('click',function (){
-            starWindRound(0.2,deg+1);
+            starWindRound(0.5,deg+3);
         },false);
 
         //星星闪烁
@@ -61,7 +75,7 @@ window.onload = function (){
         var main = document.getElementById('main');
         var header = document.getElementById('header');
         text.style.display = "none";
-        var obj = {
+        var obj1 = {
             element: comet,
             time: 1500,
             target: {"left": w+400,"top": 300},
@@ -69,22 +83,45 @@ window.onload = function (){
         };
         var startObj = {
             element: start,
-            time: 800,
+            time: 500,
             target: {opacity: 0},
             type: "linear",
             callBack: function (){
+                text.style.display = 'none';
                 start.style.display = "none";
                 main.style.display = "block";
                 header.style.display = "block";
                 clearTimeout(start.timer);
                 pageOneCavans();
+                pageOneText();
             }
         };
-        cTween(obj);
+        cTween(obj1);
         start.timer = setTimeout(function (){
             cTween(startObj);
-        },1400);
+        },1000);
     },false);
+    //pageOne文字上浮效果函数
+    function pageOneText(){
+        var name = document.getElementsByClassName('name')[0];
+        var personText = document.getElementsByClassName('personText')[0];
+        var objText = {
+            element: personText,
+            time: 500,
+            target: {"top": 300,"opacity": 100},
+            type: "linear"
+        };
+        var objName = {
+            element: name,
+            time: 500,
+            target: {"top": 250,"opacity": 100},
+            type: "linear",
+            callBack: function (){
+                cTween(objText);
+            }
+        };
+        cTween(objName);
+    }
 
 
     //星空转动函数
@@ -209,7 +246,9 @@ function pageOneCavans(){
     //运动有关
     //加入缓动的运动函数
     function initAnimate(){
-        animate();
+        //animate();
+        clearInterval(oneTimer);
+        oneTimer = setInterval(animate,150);
         for(var i in points){
             changePoint(points[i]);
         }
@@ -236,7 +275,7 @@ function pageOneCavans(){
                 points[i].Circle.draw();
             }
         }
-        requestAnimationFrame(animate);
+        //requestAnimationFrame(animate);
     }
 
     //缓动函数，实现动画
