@@ -1,0 +1,373 @@
+* {
+    -webkit-text-size-adjust: none;
+}
+h1 {
+    margin: 0;
+}
+a,
+input {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    height:100%;
+    font-size: 0.6rem;
+    font-family: Arial, "宋体";
+    background: #f8f6f5;
+}
+.sprite {
+    background: url(../img/sprite.png) no-repeat;
+    background-size: 12.35rem 7.975rem;
+}
+#head {
+    position:relative;
+}
+h1 {
+    height: 4.275rem;
+    text-align: center;
+    border-bottom: 3px solid #eee1e1;
+}
+#head .logo {
+    display: inline-block;
+    margin-top: 1.1rem;
+    width: 6.2rem;
+    height: 2.075rem;
+    background: url(../img/sprite.png) no-repeat 0 0;
+    background-size: 12.35rem 7.975rem;
+}
+#scrollPart {
+    position: absolute;
+    top: 4.35rem;
+    left: 0;
+    bottom: 3.2rem;
+    overflow: auto;
+    width:24.9rem;
+    margin: 0 1.05rem;
+}
+#scrollPart .search {
+    margin: 0;
+    margin-top: 1.05rem;
+    height: 2.925rem;
+    border: 3px solid #8ed0d7;
+    background: #fff;
+}
+.search a {
+    float: left;
+    margin: 0.75rem 0.675rem 0.775rem;
+    width: 1.325rem;
+    height: 1.4rem;
+    background: url(../img/sprite.png) no-repeat 0 -2.2rem;
+    background-size: 12.35rem 7.975rem;
+}
+.search .text {
+    float: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 4px;
+    width: 21rem;
+    height:100%;
+    font: 1.2rem/3rem "宋体";
+    border: none;
+}
+#popular {
+    padding: 1rem 0 1.675rem;
+    height: 1rem;
+}
+#popular ul {
+    height: 1rem;
+}
+#popular li {
+    float: left;
+    margin-right: 1.875rem;
+    height: 1rem;
+}
+#popular a {
+    display: inline-block;
+
+}
+#popular span {
+    float: left;
+    margin: 0.125rem 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: #ee615d;
+}
+#popular b {
+    float:left;
+    padding-left: 0.425rem;
+    font-weight: normal;
+    font: 1rem/1rem "宋体";
+    color: #000;
+
+}
+ #popular .second{
+    background:#fba68d;
+}
+#popular .third{
+    background:#70adc1;
+}
+#popular .fourth{
+    background:#7fd7dc;
+}
+#scrollPart .title {
+    height: 2.925rem;
+}
+.title h2 {
+    float: left;
+    margin: 0;
+    padding-left: 1px;
+    font: 1rem/1rem "宋体";
+    color: #999;
+}
+.title a {
+    float: right;
+    padding-right: 3px;
+    font: 1rem/1rem "宋体";
+    color: #999;
+}
+#hot .content {
+    overflow: hidden;
+    padding-top: 0.75rem;
+    border-top: 3px solid #e8e6e5;
+}
+#hot .img {
+    margin-right: -1.05rem;
+    width: 25.95rem;
+    height: 7.8rem;
+
+}
+#hot .img a {
+    float: left;
+    margin-right: 1.05rem;
+}
+#hot .img img {
+    width: 11.925rem;
+    height:7.8rem;
+}
+#hot .ico {
+    padding: 0.9rem 0 2.25rem;
+    text-align: center;
+}
+#hot .ico i {
+    display: inline-block;
+    margin-right: 0.6rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 0.125rem/0.1rem;
+    background: #b2b2b2;
+}
+#hot .ico i:nth-child(4) {
+    background: #444;
+}
+#classify {
+    width: 100%;
+    padding-bottom: 1.675rem;
+}
+#classify .list {
+    padding-right: 0.15rem;
+    width: 24.75rem;
+    height: 10.8rem;
+}
+#classify li {
+    float: left;
+    padding: 0 0.075rem 0.15rem 0;
+    background: #fff;
+}
+#classify a {
+    float: left;
+    padding: 0.625rem 2.65rem 0 2.575rem;
+    width: 2.95rem;
+    height: 4.5rem;
+    background: #efeae8;
+}
+#classify i {
+    float: left;
+    width: 2.95rem;
+    height: 2.575rem;
+    font-style: normal;
+}
+#classify .first {
+    background-position: -6.325rem 0;
+}
+#classify .second {
+    background-position: -9.4rem 0;
+}
+#classify .third {
+    background-position: -6.325rem -2.7rem;
+}
+#classify .fourth {
+    background-position: -9.4rem -2.7rem;
+}
+#classify .fifth {
+    background-position: -6.325rem -5.4rem;
+}
+#classify .sixth {
+    background-position: -9.4rem -5.4rem;
+}
+#classify .text {
+    float: left;
+    margin-right: -0.1rem;
+    width: 3.05rem;
+    font: 1rem/1.35rem "宋体";
+    color: #000;
+    text-align: center;
+}
+#classify .both {
+    width: 100%;
+    height: 3.3rem;
+    background: #efeae8;
+}
+#classify .both a {
+    float: left;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font: 1.15rem/3.3rem "宋体";
+    color: #000;
+    text-align: center;
+}
+#menu .list li {
+    height: 6.9rem;
+    border-top: 3px solid #e8e6e5;
+}
+#menu .listLink {
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+#menu .listLink .content {
+    float: left;
+    width: 15rem;
+    height:100%;
+}
+#menu .listLink img {
+    float: right;
+    padding: 0.9rem 0;
+    width: 5.1rem;
+    height: 5.1rem;
+}
+#menu .listLink b {
+    display: inline-block;
+    width: 100%;
+    height: 4rem;
+    font: 1.25rem/3.4rem "宋体";
+    color: #000;
+}
+#menu .listLink .text {
+    margin-right: 0.7rem;
+    height: 2.9rem;
+    font: 0.9rem/2.8rem Arial, "宋体";
+    color: #777;
+}
+#rank .list li {
+    padding:0.9rem 0 1.2rem;
+    height: 3.75rem;
+    border-top: 3px solid #e8e6e5;
+}
+#rank .list li:last-child{
+    border-bottom: 3px solid #e8e6e5;
+}
+#rank .list a {
+    float: left;
+    width: 100%;
+    height: 100%;
+
+}
+#rank .list img {
+    float:left;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+#rank .content {
+    float: left;
+    padding-left: 0.25rem;
+    width: 20.35rem;
+    position: relative;
+}
+#rank .content b {
+    display: block;
+    font: 1.2rem/2rem "微软雅黑";
+    color: #000;
+}
+#rank .content span{
+    font: 0.9rem/1.65rem "微软雅黑";
+    color: #7a7a7a;
+}
+#rank .content i {
+    position: absolute;
+    top: 1.5rem;
+    right: 0.05rem;
+    width: 0.5rem;
+    height: 0.75rem;
+    background-position: -1.45rem -2.2rem;
+}
+#guild {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow:hidden;
+    z-index: 3;
+    width: 100%;
+    height: 3.575rem;
+    border-top: 1px solid #e8e6e5;
+}
+#guild .ico {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+#guild .ico a:nth-child(1) {
+    position: absolute;
+    top: 1.325rem;
+    left: 2.215rem;
+    width: 1rem;
+    height: 1.125rem;
+    background-position: -2.075rem -2.2rem;
+}
+#guild .ico a:nth-child(2) {
+    position: absolute;
+    top: 1.325rem;
+    left: 7.675rem;
+    width: 1rem;
+    height: 1.125rem;
+    background-position: -3.2rem -2.2rem;
+}
+#guild .ico a:nth-child(3) {
+    position: absolute;
+    top: 0.95rem;
+    left: 12.4rem;
+    width: 2.15rem;
+    height: 1.85rem;
+    background-position: 0 -3.725rem;
+}
+#guild .ico a:nth-child(4) {
+    position: absolute;
+    top: 1.1rem;
+    right: 7.3rem;
+    width: 1.55rem;
+    height: 1.55rem;
+    background-position: -4.325rem -2.2rem;
+}
+#guild .ico a:nth-child(5) {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.9rem;
+    width: 1.525rem;
+    height: 1.55rem;
+    background-position: -4.325rem -3.9rem;
+}
+
+

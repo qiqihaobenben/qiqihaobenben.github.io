@@ -1,0 +1,439 @@
+/*
+首页主体部分css
+*/
+#wrap {
+    margin: 0 auto;
+    width: 1200px;
+}
+#banner {
+    width: 100%;
+}
+#banner .bannerRright {
+    float: left;
+    width: 238px;
+    border: 1px solid #e6e6e6;
+}
+#banner .bannerList {
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+}
+#banner .bannerList li {
+    position: relative;
+    padding-top: 7px;
+    width: 100%;
+    border-bottom: 1px dotted #e6e6e6;
+    line-height: 24px;
+    font-size: 0;
+}
+#banner .bannerList .lastLi {
+    border: none;
+}
+#banner .bannerList h3 a{
+    font: bold 14px / 18px "microsoft yahei";
+}
+#banner .bannerList a {
+    font-size: 12px;
+    padding-right: 16px;
+    white-space: nowrap;
+}
+#banner .bannerList a:hover {
+    color: #f69;
+}
+#banner .bannerList .ltIcon {
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    width: 6px;
+    height: 9px;
+    background-position: -215px -69px;
+}
+#banner .showBox {
+    z-index: 10000;
+    padding-bottom: 10px;
+    position: absolute;
+    top: -1px;
+    right: -372px;
+    padding-left: 20px;
+    width: 330px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+#banner .showBox li {
+    padding-top: 12px;
+    border: none;
+    font-size: 0;
+}
+#banner .showBox h4 {
+    font: bold 14px / 20px "microsoft yahei";
+}
+#banner .showBox a {
+    padding-right: 14px;
+}
+
+#banner .bannerLeft {
+    float: left;
+    width: 960px;
+
+}
+#banner .bannerImages {
+    width: 100%;
+    height: 419px;
+}
+#banner .bannerImages ul {
+    width: 100%;
+    height: 100%;
+    background: #f69;
+}
+#banner .bannerBottom {
+    width: 100%;
+    padding-top: 17px;
+}
+#banner .bannerBottom li {
+    float: left;
+    padding-left: 10px;
+    width: 182px;
+    height: 145px;
+}
+#banner .bannerBottom img {
+    width: 182px;
+    height: 145px;
+}
+#main>div {
+    padding-top: 44px;
+    width: 100%;
+}
+#main .header {
+    position: relative;
+    width: 100%;
+}
+#main .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    color: #666;
+}
+#main .title h3 {
+    display: inline-block;
+    font: bold 20px / 20px "simsun";
+}
+#main .title span {
+    display: inline-block;
+    padding: 7px 10px 0;
+    font: 12px / 12px "simsun";
+}
+#main .border {
+    width: 100%;
+    height: 17px;
+    border-bottom: 1px solid #ededed;
+}
+#main .content {
+    width: 100%;
+    padding-top: 20px;
+}
+#main.dec a {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#main .dec a:hover {
+    color: #f69;
+}
+#main .contentBtn {
+    padding-bottom: 20px;
+    width: 100%;
+    height: 23px;
+    text-align: center;
+}
+#main .contentBtn a {
+    display: inline-block;
+    margin: 0 20px;
+    height: 21px;
+    font: 14px / 20px "simsun";
+    border-bottom: 2px solid #fff;
+}
+#main .contentBtn .btnBorder {
+    border-bottom: 2px solid #f69;
+    color: #f69;
+}
+#pop .content li {
+    float: left;
+    width: 200px;
+    height: 230px;
+    text-align: center;
+}
+#pop .content img {
+    vertical-align: middle;
+    height: 230px;
+}
+#new .content ul {
+    width: 1220px;
+    margin-right: -20px;
+}
+#new .content li {
+    float: left;
+    padding-right: 20px;
+    width: 224px;
+    height: 435px;
+}
+#new .imgLink {
+    width: 224px;
+    height: 340px;
+}
+#new .imgLink img {
+    width: 224px;
+    height: 340px;
+}
+#new .dec {
+    width: 100%;
+    padding-top: 15px;
+}
+#new .price span {
+    font: 20px / 21px arial, "simsun";
+    color: #f69;
+}
+#new .price i {
+    float: right;
+    padding-left: 18px;
+    color: #666;
+    background-position: -102px -70px;
+}
+#new .dec p {
+    width: 100%;
+    line-height: 24px;
+
+}
+#fashion .content ul {
+    width: 1220px;
+    margin-right: -20px;
+}
+#fashion .content li {
+    float: left;
+    padding-right: 20px;
+    width: 386px;
+}
+#fashion .imgLink {
+    width: 386px;
+    height: 386px;
+}
+#fashion .imgLink img {
+    width: 386px;
+    height: 386px;
+}
+#fashion .dec {
+    padding-top: 17px;
+    width: 100%;
+}
+#fashion .price {
+    height: 26px;
+    line-height: 26px;
+}
+#fashion .price strong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f69;
+}
+#fashion .price span {
+    padding-left: 25px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+#fashion .tt {
+    display: inline-block;
+    height: 26px;
+    font: bold 14px / 26px "simsun";
+}
+#fashion .txt {
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    font: 12px / 24px Arial;
+}
+#fashion .tag {
+    padding: 0 4px;
+    height: 19px;
+    line-height: 19px;
+}
+#fashion .tag i {
+    padding: 3px 17px;
+    background-position: 0 -191px;
+}
+#fashion .tag a {
+    padding: 0 6px;
+    color: #f69;
+}
+#fan .content ul {
+    margin-right: -20px;
+    width: 1220px;
+
+}
+#fan .content li {
+    float: left;
+    padding-right: 20px;
+    width: 386px;
+}
+#fan .imgLink {
+    width: 100%;
+    height: 230px;
+}
+#fan .imgLink img {
+    width: 100%;
+    height: 230px;
+}
+#shop .content ul {
+    margin-right: -20px;
+    width: 1220px;
+}
+#shop .content li {
+    float: left;
+    padding-right: 20px;
+    width: 386px;
+}
+#shop .imgLink {
+    width: 100%;
+    height: 333px;
+}
+#shop .imgLink img {
+    width: 100%;
+    height: 333px;
+}
+#shop .txt {
+    padding-top: 15px;
+    width: 100%;
+}
+#shop .txt p{
+    text-align: center;
+    color: #666;
+}
+#shop .big a {
+    font: bold 21px / 29px Arial, "simsun";
+}
+#shop .big a:hover {
+    color: #f69;
+}
+#shop .small {
+    height: 24px;
+    font: 12px / 24px "simsun";
+    color: #999;
+}
+#shop .sell {
+    font: 12px / 24px arial,"simsun";
+}
+#newShop .content ul {
+    margin-right: -20px;
+    width: 1220px;
+}
+#newShop .content li {
+    float: left;
+    padding-right: 20px;
+    width: 224px;
+}
+#newShop .imgLink {
+    width: 100%;
+    height: 340px;
+}
+#newShop .imgLink img {
+    width: 100%;
+    height: 340px;
+}
+#select .content ul {
+    margin-right: -20px;
+    width: 1220px;
+}
+#select .content li {
+    float: left;
+    padding-right: 20px;
+    width: 224px;
+}
+#select .imgLink {
+    width: 100%;
+    height: 340px;
+}
+#select .imgLink img {
+    width: 100%;
+    height: 340px;
+}
+#select .dec {
+    width: 100%;
+    padding: 20px 0;
+}
+#select .price span {
+    font: 18px / 21px arial, "simsun";
+    color: #f69;
+}
+#select .price i {
+    float: right;
+    padding-left: 18px;
+    color: #666;
+    background-position: -102px -70px;
+}
+#select .dec p {
+    width: 100%;
+    line-height: 24px;
+
+}
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

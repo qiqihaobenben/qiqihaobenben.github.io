@@ -1,0 +1,350 @@
+/*
+公共样式表
+*/
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+p{
+    margin: 0;
+    padding: 0;
+    font-family: "simsun";
+    font-size: 12px;
+    color: #666;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+i {
+    font-style: normal;
+}
+strong {
+    font-weight: normal;
+}
+.clearFix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.clearFix {
+    zoom: 1;
+}
+.pink {
+    color: #f69;
+}
+.spirt {
+    background: url("../images/sprite.png") no-repeat 0 0;
+}
+#header {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid #f69;
+}
+#header .topBar {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eee;
+}
+#header .inner {
+    margin: 0 auto;
+    width: 1200px;
+}
+#header .innerList {
+    width: 100%;
+    text-align: right;
+    font-size: 0;
+}
+#header li {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+#header .innerList a {
+    display: inline-block;
+    padding: 0 15px;
+    height: 20px;
+    border-right: 1px dotted #ccc;
+    line-height: 20px;
+}
+#header .innerList a:hover {
+    color: #f69;
+}
+#header .shopImg {
+    display: inline-block;
+    margin: 0 6px;
+    width: 18px;
+    height: 16px;
+    vertical-align: sub;
+    background: url("../images/sprite.png") no-repeat 0 -163px;
+}
+#header .dingdan {
+    display: inline-block;
+    margin: 0 6px;
+    width: 13px;
+    height: 15px;
+    vertical-align: sub;
+    background: url("../images/sprite.png") no-repeat -223px -45px;
+}
+#header .download {
+    display: inline-block;
+    margin: 0 7px;
+    width: 10px;
+    height: 16px;
+    vertical-align: sub;
+    background: url("../images/sprite.png") no-repeat -171px -45px;
+}
+#header .sigleD {
+    display: inline-block;
+    margin: 0 2px;
+    width: 5px;
+    height: 3px;
+    vertical-align: middle;
+    background: url("../images/sprite.png") no-repeat -22px -70px;
+}
+#header .innerList .lastA {
+    border-right: none;
+}
+#header .headerMain {
+    margin: 0 auto;
+    width: 1200px;
+    height: 123px;
+}
+#header h1 {
+    float: left;
+    margin-top: 40px;
+    width: 204px;
+    height: 52px;
+}
+#header .title {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 52px;
+    width: 204px;
+    height: 0;
+    background: url("../images/title.png") no-repeat 0 0;
+}
+#header .search {
+    float: left;
+    padding: 21px 0 0 156px;
+    width: 519px;
+    height: 94px;
+}
+#header .searchType {
+    width: 100%;
+    height: 24px;
+}
+#header .searchType div {
+    float: left;
+    display: inline-block;
+    width: 56px;
+    height: 100%;
+    font: 12px / 24px "microsoft yahei";
+    text-align: center;
+    background: #f2f2f2;
+    color: #666;
+}
+#header .searchType .btnColor {
+    background: #f69;
+    color: #fff;
+}
+#header .searchBox {
+    width: 515px;
+    height: 28px;
+    border: 2px solid #f69;
+}
+#header .searchBox input {
+    float: left;
+    padding: 0 8px;
+    width: 400px;
+    height: 100%;
+    font: 13px / 28px "microsoft yahei";
+}
+#header  .searchBtn {
+    float: right;
+    display: inline-block;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+    background: #f69;
+    cursor: pointer;
+}
+#header  .searchBtn i {
+    display: inline-block;
+    margin-top: 6px;
+    width: 16px;
+    height: 15px;
+    background: url("../images/sprite.png") no-repeat -223px -70px;
+}
+#header .searchList {
+    width: 100%;
+    height: 38px;
+}
+#header .searchList li {
+    float: left;
+    padding-right: 8px;
+    height: 38px;
+    line-height: 38px;
+}
+#header .searchList a:hover {
+    color: #f69;
+}
+#header .nav {
+    margin: 8px auto 0;
+    width: 1200px;
+    height: 46px;
+}
+#header .nav li {
+    float: left;
+    padding-right: 12px;
+}
+#header .nav a {
+    display: inline-block;
+    padding: 0 15px;
+    height: 44px;
+    font: bold 14px / 44px "microsoft yahei";
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+#header .nav a:hover {
+    color: #f69;
+}
+#header .nav .hover {
+    border-bottom: 2px solid #f69;
+    color: #f69;
+}
+#navMore {
+    position: relative;
+}
+#navMore span {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: 1px;
+    height: 16px;
+    border-right: 1px dotted #d6d7d8;
+}
+#navMore i {
+    display: inline-block;
+    margin: 0 11px;
+    width: 5px;
+    height: 3px;
+    vertical-align: middle;
+    background-position: -22px -70px;
+}
+
+
+#footer {
+    padding-top: 1px;
+    width: 100%;
+    background: #f5f5f5;
+    color: #666;
+}
+#footer .footContain {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+#footer .box {
+    margin: 0 auto;
+    padding-top: 32px;
+    width: 1200px;
+}
+#footer .footContent {
+    width: 100%;
+    height: 182px;
+}
+#footer .footContent div {
+    float: left;
+    padding-right: 50px;
+}
+#footer .footCall {
+    position: relative;
+    padding-left: 48px;
+}
+#footer .footCallNum {
+    font: 18px / 22px Arial;
+}
+#footer .footCall p {
+    font: 13px / 25px "microsoft yahei";
+}
+#footer .footCallImg {
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-position: 0 -114px;
+}
+#footer h3 {
+    padding-bottom: 4px;
+    font: bold 16px / 24px "microsoft yahei";
+}
+#footer .footContain li {
+    font: 12px / 21px "microsoft yehei";
+}
+#footer .footAct i {
+    display: inline-block;
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+#footer .sinoImg {
+    background-position: 0 -21px;
+}
+#footer .qqImg {
+    background-position: -24px -21px;
+}
+#footer .QImg {
+    background-position: -49px -21px;
+}
+#footer .weixinhao {
+    margin-top:  11px;
+    width: 115px;
+    height: 115px;
+}
+#footer .weixinhao img {
+    width: 115px;
+    height: 115px;
+}
+#footer .footClent img {
+    height: 154px;
+}
+#footer .friendLink {
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+#footer .friendLink li {
+    float: left;
+    padding: 0 10px;
+    line-height: 30px;
+}
+#footer .company {
+    width: 100%;
+    padding-top: 9px;
+}
+#footer .company p {
+    font: 12px / 23px "microsoft yahei";
+}
+
+
+
+

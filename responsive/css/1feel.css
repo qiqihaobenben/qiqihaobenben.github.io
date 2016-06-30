@@ -1,0 +1,1121 @@
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+img {
+    border: none;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+i,
+em {
+    font-style: normal;
+}
+strong,
+b {
+    font-weight: normal;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+table {
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+td {
+    padding: 0;
+}
+.clear {
+    zoom: 1;
+}
+.clear:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.spriterJpg {
+    background: url(../sprite/sprite-jpg.jpg) no-repeat;
+}
+.spriterPng {
+    background: url(../sprite/spritePng.png) no-repeat;
+}
+/*头部开始*/
+#head {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#head .contain {
+    padding: 10px;
+    background: #333;
+}
+#head .logo {
+    float: left;
+    margin: 0;
+    margin-left: 5px;
+    width: 51px;
+    height: 20px;
+    background: url(../sprite/sprite-jpg.jpg) no-repeat;
+}
+#head .nav {
+    float: right;
+}
+#head .nav a {
+    float: left;
+    padding-left: 16px;
+    font:14px/22px "微软雅黑";
+    color: #fff;
+    height: 20px;
+}
+#head .nav a:hover {
+    color: #f60;
+}
+#head .img {
+    width: 100%;
+    height: 210px;
+}
+#head .minImg {
+    display: inline-block;
+    width: 100%;
+    height: 210px;
+    background: url(../img/iphone_img1.jpg) no-repeat 0 0;
+    background-size: cover;
+}
+#fixedIcon {
+    position: fixed;
+    top: 154px;
+    right: 0;
+    width: 120px;
+    height:132px;
+}
+#head .banner {
+    display: none;
+}
+#head .phone {
+    display: none;
+}
+#head .content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+#head .content .btn {
+    display: none;
+}
+#head .turn {
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 100%;
+}
+#head .between {
+    width: 70px;
+    margin: 0 auto;
+}
+
+#head .turn a {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    margin-left: 12px;
+    background: #fff;
+}
+#head .turn a:first-child {
+    margin-left:0;
+    width: 30px;
+}
+#head .text {
+    line-height: 32px;
+    height:30px;
+    color: #fff;
+}
+#head .firstIcon {
+    display: none;
+}
+#head .secondIcon {
+    display: none;
+}
+#head .thirdIcon {
+    display: none;
+}
+/*头部结束*/
+
+/*主体开始*/
+#wrap {
+    width: 100%;
+}
+/*业务介绍开始*/
+#serve {
+    padding: 32px 0 27px;
+}
+#serve .content {
+    width: 100%;
+}
+#serve .top_text {
+    margin: 0;
+    width: 100%;
+    font: 18px / 34px "微软雅黑";
+    text-align: center;
+}
+#serve .mid_text {
+    display: none;
+}
+#serve .bot_text {
+    font: 18px / 34px "微软雅黑";
+    text-align: center;
+    color: #3984e4;
+}
+#serve .tell_link {
+    color: #3984e4;
+}
+#serve .business {
+    margin: 0 auto;
+    padding-top: 17px;
+    width: 290px;
+}
+#serve .business a {
+    float: left;
+    display: block;
+    width: 50%;
+    height: 150px;
+    text-align: center;
+}
+#serve .business span {
+    position: relative;
+    display: inline-block;
+    margin-top: 17px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#serve .icon1 {
+    background: url(../sprite/b_1.jpg) 0 0 / 80px 80px;
+}
+#serve .icon2 {
+    background: url(../sprite/b_2.jpg) 0 0 / 80px 80px;
+}
+#serve .icon3 {
+    background: url(../sprite/b_3.jpg) 0 0 / 80px 80px;
+}
+#serve .icon4 {
+    background: url(../sprite/b_4.jpg) 0 0 / 80px 80px;
+}
+#serve .icon_gradient {
+    display: none;
+}
+#serve .business strong {
+    display: block;
+    padding-top: 19px;
+    line-height: 34px;
+    text-align: center;
+    color: #000;
+}
+#serve .business em {
+    display: none;
+}
+/*业务介绍结束*/
+/*项目介绍开始*/
+#program {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+}
+#program .list {
+    width: 100%;
+}
+#program .list li {
+    float: left;
+    width: 50%;
+}
+#program .list li:nth-child(5) {
+    width: 100%;
+}
+#program .listLink {
+    display: block;
+    position: relative;
+    overflow:hidden;
+}
+#program .list img {
+    width: 100%;
+}
+#program .smIcon {
+    display: none;
+}
+#program .feature {
+    display: none;
+}
+/*项目介绍结束*/
+/*宣传板开始*/
+#advertise {
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+#advertise .content {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 20px;
+    width: 100%;
+    background: #0084e0;
+}
+#advertise .succeed {
+    margin-top: 30px;
+    width: 100%;
+}
+#advertise .lang {
+    width: 100%;   
+}
+#advertise .succeed i {
+    display: none;
+}
+#advertise .text {
+    padding: 18px 0 21px;
+    width: 100%;
+    line-height: 21px;
+    color: #fff;
+}
+#advertise .list {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e4;
+    border-right: 1px solid #e5e5e4;
+    overflow: hidden;
+}
+#advertise li {
+    box-sizing: border-box;
+    float: left;
+    width: 33.3%;
+    height: 95px;
+    border-top: 1px solid #e5e5e4;
+    border-left: 1px solid #e5e5e4;
+    background: #f7f7f5;
+}
+#advertise table {
+    width: 100%;
+    height: 95px;
+    text-align: center;
+}
+#advertise .icon {
+    width: 90%;
+}
+
+/*宣传板结束*/
+/*企业环境图开始*/
+#img {
+    width: 100%;
+    margin-top: 21px;
+}
+#img .img1 {
+    display: none;
+}
+#img .img2 {
+    display: none;
+}
+#img .img3 {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+}
+#img .img4 {
+    display: none;
+}
+
+/*企业环境图结束*/
+/*主体结束*/
+/*底部开始*/
+#foot {
+    box-sizing: border-box;
+    padding: 35px 11px 69px;
+    width: 100%;
+    background: #252525;
+}
+#foot .icon {
+    margin: 0 auto;
+    width: 57px;
+    height: 36px;
+    background: url("../sprite/foot_img.jpg") 0 0 / 100% 100%;
+}
+#foot .contain {
+    padding-top: 17px;
+    width: 100%;
+    text-align: center;
+}
+#foot span {
+    font: 20px / 20px Arial;
+    color: #fff;
+}
+#foot .tell {
+    margin-right: 38px;
+}
+#foot .text1 {
+    padding-top: 9px;
+    font: 12px / 12px "微软雅黑";
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+#foot .text2 {
+    padding-top: 28px;
+    font: 12px / 18px "微软雅黑";
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, .5);
+}
+#foot .text3 {
+    font: 12px / 18px "微软雅黑";
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, .5);
+}
+
+/*底部结束*/
+
+
+
+
+/*最小尺寸454px*/
+@media all and (min-width: 454px) {
+    /*头部开始*/
+    @keyframes first {
+        0% {
+            left: -80px;
+            top: 50px;
+        }
+        100% {
+            left: -135px;
+            top: 0;
+        }
+    }
+    @keyframes second {
+        0% {
+            left: 140px;
+            top: 80px;
+        }
+        100% {
+            left: 170px;
+            top: 60px;
+        }
+    }
+    @keyframes third {
+        0% {
+            left: 94px;
+            top: 130px;
+        }
+        100% {
+            left: 74px;
+            top: 150px;
+        }
+    }
+    #head .contain {
+        padding: 0;
+        background: none;
+    }
+    #head .logo {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        margin: 0;
+        width: 77px;
+        height: 30px;
+        background: url(../sprite/logo.png) no-repeat;
+        background-size: 77px 30px;
+    }
+    #head .phone {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    #head .phoneIcon {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: url(../sprite/phone.png) no-repeat 0 0 / 20px 20px;
+    }
+    #head .phoneNub {
+        padding-left: 6px;
+        font-family: Arial;
+        color: #fff;
+    }
+    #head .nav {
+        float:none;
+        position: absolute;
+        top: 20px;
+        right: 150px;
+        z-index: 2;
+    }
+    #head .minImg {
+        display: none;
+    }
+    #head .img {
+        height: 300px;
+        overflow:hidden;
+    }
+    #head .bannerLink {
+        float: left;
+        width: 100%;
+    }
+    #head .banner {
+        display: inline-block;
+        width: 100%;
+        height: 300px;
+        background: url(../img/f1.jpg) no-repeat 50% 50%;
+    }
+    #head .turn {
+        bottom: 16px;
+    }
+    #head .between {
+        width: 58px;
+        margin: 0 auto;
+    }
+    #head .turn a:first-child {
+        width: 18px;
+    }
+    #head .content {
+        position: absolute;
+        left:auto;
+        right: 8px;
+        bottom: 40px;
+        width: 220px;
+        background: none;
+        transition: 1s;
+    }
+    #head .text {
+        float: left;
+        overflow: hidden;
+        height: 0;
+        padding-top: 73px;
+        background: url(../img/lbt_1_4.png) no-repeat;
+        background-size: 220px 73px;
+    }
+    #head .content .btn {
+        display: block;
+        float: left;
+        width: 107px;
+        height: 31px;
+        line-height: 31px;
+        text-align: center;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+    #head .content .btn:hover {
+        background: #fff;
+        color: #000;
+    }
+    #head .firstIcon {
+        display: inline;
+        position: absolute;
+        left: -135px;
+        top: 0;
+        width: 837px;
+        height: 602px;
+        background: url(../img/lbt_1_3.png) no-repeat;
+        animation: first 1.5s 0.5s linear ;
+        animation-fill-mode: both;
+    }
+    #head .secondIcon {
+        display: inline;
+        position: absolute;
+        left: 170px;
+        top: 60px;
+        width: 390px;
+        height: 148px;
+        background: url(../img/lbt_1_1.png) no-repeat 0 0 / 390px 148px;
+        animation: second 1.5s 0.5s linear ;
+        animation-fill-mode: both;
+    }
+    #head .thirdIcon {
+        display: inline;
+        position: absolute;
+        left: 944px;
+        top: 130px;
+        width: 259px;
+        height: 124px;
+        background: url(../img/lbt_1_2.png) no-repeat 0 0 / 259px 124px;
+        animation: third 1.5s 0.5s linear ;
+        animation-fill-mode: both;
+    }
+    /*头部结束*/
+
+    /*主体开始*/
+    /*业务介绍开始*/
+    #serve {
+        padding: 46px 0 72px;
+    }
+    #serve .top_text {
+        font: 30px / 48px "微软雅黑";
+    }
+    #serve .mid_text {
+        display: block;
+        font: 18px / 36px "微软雅黑";
+        text-align: center;
+    }
+    #serve .bot_text {
+        height: 50px;
+        font: 24px / 60px "微软雅黑";
+    }
+    #serve .business {
+        padding-top: 34px;
+        width: 468px;
+    }
+    #serve .business a {
+        height: 264px;
+    }
+    #serve .business span {
+        margin-top: 0px;
+        width: 131px;
+        height: 131px;
+    }
+    #serve .icon1 {
+        background-size: 131px 131px;
+    }
+    #serve .icon2 {
+        background-size: 131px 131px;
+    }
+    #serve .icon3 {
+        background-size: 131px 131px;
+    }
+    #serve .icon4 {
+        background-size: 131px 131px;
+    }
+    #serve .business strong {
+        padding-top: 15px;
+        text-align: center;
+        font: 20px / 48px "微软雅黑";
+        height: 48px;
+    }
+    #serve .business em {
+        display: block;
+        font: 12px / 18px "微软雅黑";
+        text-align: center;
+        color: #666;
+    }
+    /*业务介绍结束*/
+    /*宣传板开始*/
+    #advertise .content {
+        padding: 0 42px;
+    }
+    #advertise .succeed {
+        margin-top: 60px;
+    }
+    #advertise .succeed i {
+        display: none;
+    }
+    #advertise .text {
+        padding: 45px 0 64px;
+    }
+    #advertise li {
+        width: 25%;
+        height: 105px;
+    }
+    #advertise table {
+        height: 105px;
+    }
+
+    /*宣传板结束*/
+    /*企业环境图开始*/
+    #img li {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        border-bottom: 1px solid #fff;
+    }
+    #img li:nth-child(2n-1) {
+        border-right: 1px solid #fff;
+    }
+    #img .img1 {
+        display: inline-block;
+        width: 100%;
+    }
+    #img .img2 {
+        display: inline-block;
+        width: 100%;
+    }
+    #img .img4 {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*企业环境图结束*/
+}
+
+/*最小尺寸742px*/
+@media all and (min-width:742px) {
+    /*头部开始*/
+    @keyframes first {
+        0% {
+            left: 40px;
+            top: 100px;
+        }
+        100% {
+            left: -40px;
+            top: 48px;
+        }
+    }
+    @keyframes second {
+        0% {
+            left: 320px;
+            top: 190px;
+        }
+        100% {
+            left: 420px;
+            top: 90px;
+        }
+    }
+    @keyframes third {
+        0% {
+            left: 202px;
+            top: 160px;
+        }
+        100% {
+            left: 182px;
+            top: 180px;
+        }
+    }
+    #head .logo {
+        position: absolute;
+        left: 50px;
+        top: 28px;
+        width: 118px;
+        height: 46px;
+        background-size: 118px 46px;
+    }
+    #head .phone {
+        top: 28px;
+        right: 50px;
+    }
+    #head .phoneIcon {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+    #head .phoneNub {
+        padding-left: 10px;
+        font-size: 22px;
+        line-height: 30px;
+        font-family: Arial;
+        color: #fff;
+    }
+    #head .nav {
+        top: 28px;
+        right: 262px;
+    }
+    #head .nav a {
+        padding-left: 52px;
+        font: 16px / 30px "微软雅黑";
+        height: 30px;
+    }
+    #head .img {
+        height: 450px;
+    }
+    #head .banner {
+        height: 450px;
+    }
+    #head .turn {
+        bottom: 16px;
+    }
+    #head .between {
+        width: 70px;
+    }
+    #head .turn a:first-child {
+        width: 30px;
+    }
+    #head .content {
+        right: 50px;
+        bottom: 48px;
+        width: 310px;
+    }
+    #head .text {
+        padding-top: 91px;
+        width: 100%;
+        background-size: 310px 91px;
+    }
+    #head .content .btn {
+        margin-top: 14px;
+        width: 153px;
+        height: 44px;
+        font-size: 14px;
+        line-height: 44px;
+    }
+    #head .content .btn:hover {
+        background: #fff;
+        color: #000;
+    }
+    #head .firstIcon {
+        left: 40px;
+        top: 100px;
+    }
+    #head .secondIcon {
+        left: 320px;
+        top: 190px;
+        width: 428px;
+        height: 144px;
+        background-size: 428px 144px;
+    }
+    #head .thirdIcon {
+        left: 202px;
+        top: 160px;
+        width: 266px;
+        height: 129px;
+        background-size: 266px 129px;
+    }
+    /*头部结束*/
+
+    /*主体开始*/
+    /*业务介绍开始*/
+#serve .business {
+    width: 736px;
+}
+    /*业务介绍结束*/
+    /*宣传板开始*/
+    #advertise .content {
+        float:left;
+        box-sizing: border-box;
+        width: 50%;
+    }
+    #advertise .list {
+        overflow: visible;
+        margin-top: 105px;
+        width: auto;
+    }
+    #advertise li {
+        margin-top: -1px;
+        width: 16.63%;
+        position: relative;
+        height: 106px;
+        border-bottom: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(3) {
+        border-right: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(6) {
+        border-right: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(9) {
+        border-right: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(15) {
+        border-right: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(21) {
+        border-right: 1px solid #e5e5e4;
+    }
+    #advertise li:nth-child(27) {
+        border-right: 1px solid #e5e5e4;
+    }
+    /*宣传板结束*/
+    /*企业环境图开始*/
+    #img {
+        margin-top: 50px;
+    }
+    #img li {
+        width: 25%;
+        border: none;
+    }
+    #img li:nth-child(2n-1) {
+        border-right:none;
+    }
+    #img .img1 {
+        display: inline-block;
+        width: 100%;
+    }
+    #img .img2 {
+        display: inline-block;
+        width: 100%;
+    }
+    #img .img4 {
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*企业环境图结束*/
+
+}
+
+
+
+/*大于等于986px*/
+@media all and (min-width: 986px) {
+    @keyframes gradient {
+        100% {
+            top: 100px;
+            left: 100px;
+        }
+    }
+    /*头部开始*/
+    #head .content {
+        right: -310px;
+    }
+    #head:hover .content {
+        right: 59px;
+    }
+    /*头部结束*/
+
+    /*主体开始*/
+    /*业务介绍开始*/
+    #serve .business {
+        width: 1062px;
+    }
+    #serve .business a {
+        width: 25%;
+        height: 355px;
+    }
+    #serve .business span {
+        margin-top: 22px;
+    }
+    #serve .icon_gradient {
+        display: block;
+        position: absolute;
+        top: -50px;
+        left: -80px;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(140deg, rgba(255, 255, 255, 0) 60px,
+        rgba(255, 255, 255, .5) 90px,
+        rgba(255, 255, 255, .5) 90px,
+        rgba(255, 255, 255, 0) 130px) no-repeat 0 0;
+    }
+    #serve .business a:hover .icon_gradient {
+        animation: gradient .4s linear;
+        animation-fill-mode: both;
+    }
+    /*业务介绍结束*/
+}
+
+
+
+/*大于等于1164px*/
+@media all and (min-width: 1164px) {
+    /*头部开始*/
+    @keyframes first {
+        0% {
+            left: 100px;
+            top: 234px;
+        }
+        100% {
+            left: 0;
+            top: 134px;
+        }
+    }
+    @keyframes second {
+        0% {
+            left: 350px;
+            top: 248px;
+        }
+        100% {
+            left: 504px;
+            top: 148px;
+        }
+    }
+    @keyframes third {
+        0% {
+            left: 409px;
+            top: 290px;
+        }
+        100% {
+            left: 379px;
+            top: 320px;
+        }
+    }
+    #head .img {
+        height: 609px;
+    }
+    #head .banner {
+        height: 609px;
+    }
+    #head:hover .content {
+        right: 159px;
+    }
+    #head .firstIcon {
+        left: 100px;
+        top: 234px;
+    }
+    #head .secondIcon {
+        left: 350px;
+        top: 248px;
+        width: 554px;
+        height: 180px;
+        background-size: 554px 180px;
+    }
+    #head .thirdIcon {
+        left: 409px;
+        top: 290px;
+        width: 300px;
+        height: 144px;
+        background-size: 300px 144px;
+    }
+    /*头部结束*/
+    /*项目介绍开始*/
+    #program {
+        padding: 0;
+    }
+    #program .list {
+        width: 100%;
+    }
+    #program .list li {
+        width: 25%;
+    }
+    #program .list li:nth-child(5) {
+        width: 50%;
+    }
+    #program .hoverBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(180, 61, 58, 0);
+        width: 100%;
+        height: 100%;
+    }
+    #program .listLink i {
+        display: block;
+        position: absolute;
+        left: 39px;
+        top: 20px;
+        width: 258px;
+        height:132px;
+        opacity: 0;
+    }
+    #program .list li:nth-child(5) i {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #program .smIcon1 {
+        background: url("../sprite/t_1.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon2 {
+        background: url("../sprite/t_2.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon3 {
+        background: url("../sprite/t_3.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon4 {
+        background: url("../sprite/t_4.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon5 {
+        background: url("../sprite/t_5.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon6 {
+        background: url("../sprite/t_6.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon7 {
+        background: url("../sprite/t_7.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon8 {
+        background: url("../sprite/t_8.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon9 {
+        background: url("../sprite/t_9.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon10 {
+        background: url("../sprite/t_10.png") no-repeat 0 0 / 258px 132px;
+    }
+    #program .smIcon11 {
+        background: url("../sprite/t_11.png") no-repeat 0 0 / 258px 132px;
+    }
+
+    #program .feature {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 170px;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+    }
+    #program .feature em {
+        display: block;
+        line-height: 22px;
+        color: #fff;
+        text-align: center;
+    }
+    #program .listLink:hover .hoverBg  {
+        background: rgba(180, 61, 58, 0.7);
+        transition: background 0.5s linear;
+    }
+    #program .listLink:hover img {
+        transform: scale(1.1);
+        transition: transform 0.5s linear;
+    }
+    #program .listLink:hover i {
+        opacity: 1;
+        transition: opacity 0.5s  linear;
+    }
+    #program .listLink:hover .feature {
+        opacity: 1;
+        top: 135px;
+        transition:top 0.5s linear;
+    }
+    /*项目介绍结束*/
+    /*宣传板开始*/
+    #advertise {
+        float: none;
+        overflow: hidden;
+        padding: 0;
+        width: 674px;
+        margin: 0 auto;
+    }
+    #advertise .content {
+        height: 420px;
+    }
+    #advertise .succeed {
+        position: relative;
+        margin-top: 50px;
+    }
+    #advertise .succeed i {
+        display: inline;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 69px;
+        height: 69px;
+        background: url("../sprite/icon_4.jpg") 0 0 / 69px 69px;
+        background-repeat: no-repeat;
+        opacity: 0;
+    }
+    #advertise .succeed .secondIcon {
+        left: 92px;
+        background: url("../sprite/icon_5.jpg") 0 0 / 69px 69px;
+    }
+    #advertise .succeed .thirdIcon {
+        left: auto;
+        right: 0;
+        background: url("../sprite/icon_6.jpg") 0 0 / 69px 69px;
+    }
+    #advertise .succeed i:hover {
+        opacity: 1;
+        transition: all .3s linear;
+    }
+    #advertise .text {
+        padding: 36px 0 80px;
+    }
+    #advertise li {
+        background: #fff;
+        opacity: .5;
+        overflow: hidden;
+    }
+    #advertise .icon {
+        transform: scale(1);
+    }
+    #advertise li:hover {
+        opacity: 1;
+        transition: opacity .2s linear;
+    }
+    #advertise li:hover .icon {
+        transform: scale(1.2);
+        transition: all .2s linear;
+    }
+    /*宣传板结束*/
+}

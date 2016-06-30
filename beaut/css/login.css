@@ -1,0 +1,169 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 800px;
+}
+#main {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: url("../images/login_bg_m1.jpg") no-repeat fixed 0 0;
+}
+#main .content {
+    overflow: hidden;
+    position: relative;
+    margin: 40px auto;
+    width: 980px;
+    height: 675px;
+}
+#main h1 {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 157px;
+    height: 56px;
+}
+#main .title {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 56px;
+    width: 157px;
+    height: 0;
+    background: url("../images/register_logo.png") no-repeat 0 0;
+
+}
+#main .content h2 {
+    overflow: hidden;
+    position: absolute;
+    left: 186px;
+    top:6px;
+    padding-top: 50px;
+    width: 336px;
+    height: 0;
+
+}
+#main .lo {
+    background: url("../images/welcome_txt.png") no-repeat 0 0;
+}
+#main .re {
+    background: url("../images/register_wel_m.png") no-repeat 0 0;
+}
+#main .container {
+    position: absolute;
+    left: 0;
+    top: 89px;
+    width: 100%;
+    height: 586px;
+    background: #fff;
+}
+#main .img {
+    position: absolute;
+    left: 79px;
+    top: 40px;
+    width: 370px;
+    height: 353px;
+}
+#main .info {
+    position: absolute;
+    right: 82px;
+    top: 40px;
+    width: 318px;
+}
+#main .text {
+    width: 100%;
+    height: 44px;
+}
+#main .text h3 {
+    float: left;
+    font: bold 14px / 44px "微软雅黑";
+    color: #000;
+}
+#main .text a {
+    float: right;
+    font: 14px / 44px "微软雅黑";
+    text-decoration: underline;
+}
+#main input {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    float: left;
+    width: 260px;
+    height: 100%;
+    font: 13px / 36px "宋体";
+    color: #c8c8c8;
+}
+#main .userN {
+    position: relative;
+    margin-bottom: 30px;
+    height: 36px;
+    border: 1px solid #ddd;
+}
+#main .userN i {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    margin: 11px;
+    width: 15px;
+    height: 15px;
+}
+#main .userN .false {
+    background: url("../images/login_icon-4.png") no-repeat -30px -31px;
+}
+#main .userN .true {
+    background: url("../images/login_icon-4.png") no-repeat -55px -31px;
+}
+#main .userNI {
+    float: left;
+    overflow: hidden;
+    margin: 8px 10px;
+    width: 14px;
+    height: 20px;
+    background: url("../images/login_icon-4.png") no-repeat -81px -3px;
+}
+#main .usernames {
+    float: left;
+    margin: 9px 7px 10px;
+    width: 19px;
+    height: 17px;
+    background: url("../images/login_icon-4.png") no-repeat -3px -4px;
+}
+#main .passWI {
+    float: left;
+    margin: 7px 7px 10px;
+    width: 17px;
+    height: 19px;
+    background: url("../images/login_icon-4.png") no-repeat -28px -3px;
+}
+#main .btn {
+    width: 100%;
+    height:46px;
+}
+#main .btn input {
+    width: 100%;
+    height:46px;
+    font: 16px / 46px "微软雅黑";
+    text-align: center;
+    color: #fff;
+    background: #f69;
+}
+#main  .contract {
+    box-sizing: border-box;
+    padding: 0 5px;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    border-bottom: 1px dotted #ccc;
+}
+#main  .contract input {
+    margin-top: 20px;
+    width: 13px;
+    height: 13px;
+}
+
