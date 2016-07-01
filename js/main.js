@@ -10,6 +10,7 @@ var nub = 0;
 var num = 0;
 var main = document.getElementById('main');
 var headerBox = document.getElementById('headerBox');
+var h1 = document.getElementById('h1');
 var headNav = document.getElementById('headNav');
 var navLink = headNav.getElementsByTagName('a');
 var navLine = document.getElementById('navLine');
@@ -339,6 +340,16 @@ headNav.addEventListener('mouseout',navOut);
 for(var i = 0; i < navLink.length; i++){
     navLink[i].addEventListener('click',navLinkClick)
 }
+//给小蜗牛添加点击事件回主页
+h1.onclick = function (){
+    if(nub == 0) return;
+    nub = 0;
+    navLineScroll();
+    rotate(15,1,true);
+    pageScroll(main);
+    scrollCheck();
+};
+
 
 //给第二页下方小按钮添加点击事件
 var nextBtn = pageTwo.getElementsByClassName('nextBtn')[0];
@@ -620,6 +631,7 @@ function navLineScroll(){
 }
 
 function navLinkClick(){
+    if(nub == this.dataset.index) return;
     nub = this.dataset.index;
     navLineScroll();
     rotate(15,1,true);

@@ -83,7 +83,14 @@
 #banner .bannerImages ul {
     width: 100%;
     height: 100%;
-    background: #f69;
+}
+#banner .bannerImages li {
+    width: 100%;
+    height: 100%;
+}
+#banner .bannerImages img {
+    width: 100%;
+    height: 100%;
 }
 #banner .bannerBottom {
     width: 100%;
@@ -168,6 +175,8 @@
 #pop .content img {
     vertical-align: middle;
     height: 230px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #new .content ul {
     width: 1220px;
@@ -186,6 +195,8 @@
 #new .imgLink img {
     width: 224px;
     height: 340px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #new .dec {
     width: 100%;
@@ -222,6 +233,8 @@
 #fashion .imgLink img {
     width: 386px;
     height: 386px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #fashion .dec {
     padding-top: 17px;
@@ -282,6 +295,8 @@
 #fan .imgLink img {
     width: 100%;
     height: 230px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #shop .content ul {
     margin-right: -20px;
@@ -299,6 +314,8 @@
 #shop .imgLink img {
     width: 100%;
     height: 333px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #shop .txt {
     padding-top: 15px;
@@ -338,6 +355,8 @@
 #newShop .imgLink img {
     width: 100%;
     height: 340px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #select .content ul {
     margin-right: -20px;
@@ -355,6 +374,8 @@
 #select .imgLink img {
     width: 100%;
     height: 340px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
 }
 #select .dec {
     width: 100%;

@@ -159,6 +159,7 @@ strong {
     text-align: center;
     background: #f2f2f2;
     color: #666;
+    cursor: pointer;
 }
 #header .searchType .btnColor {
     background: #f69;
@@ -190,7 +191,7 @@ strong {
     margin-top: 6px;
     width: 16px;
     height: 15px;
-    background: url("../images/sprite.png") no-repeat -223px -70px;
+    background: url("../images/sprite.png") no-repeat -38px -91px;
 }
 #header .searchList {
     width: 100%;

@@ -4,7 +4,7 @@
  */
 window.onload = function (){
     console.log('****又来看我的控制台啦？！！还不赶紧打电话邀约!****');
-    console.log('**********代码风骚，乐于学习，不怕BUG**************');
+    console.log('**********代码风骚,不怕BUG**************');
     console.log('********************姓名：陈方旭*******************');
     console.log('*********邮箱：chenfangxu_qixin.163.com************');
     console.log('******************电话：13522216755****************');
@@ -19,7 +19,7 @@ window.onload = function (){
     var bs = btn.children;
     var cover = document.getElementById('cover');
     var text = document.getElementById('content');
-    var aBtn = text.getElementsByTagName('a')[0];
+    var aBtn = text.getElementsByClassName('aBtn')[0];
     //loading页面结束
         loading.style.opacity = 0;
         loading.style.animation = '';

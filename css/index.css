@@ -276,16 +276,9 @@ a {
     clear: both;
 }
 .gray {
-    background-color: #f9f9f9;
-    background-image: -webkit-linear-gradient(rgba(255,255,255,.9),rgba(243,243,243,.9));
-    background-image: linear-gradient(rgba(255,255,255,.9),rgba(243,243,243,.9));
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.3),rgba(243,243,243,.6));
+    background-image: linear-gradient(rgba(255,255,255,.3),rgba(243,243,243,.6));
     border-bottom: 1px solid #e5e5e5;
-}
-.brown {
-    background-color: #b9b9a4;
-    background-image: -webkit-linear-gradient(rgba(199,186,186,.9),rgba(180,156,156,.9));
-    background-image: linear-gradient(rgba(199,186,186,.9),rgba(180,156,156,.9));
-    border-bottom: 1px solid #080000;
 }
 /*loading页面开始*/
 #loading {
@@ -413,6 +406,7 @@ a {
     margin-left: -100px;
     font-size: 18px;
     background: rgba(0,0,0,0.4);
+    cursor: pointer;
 }
 
 #change .aBtn:hover {
@@ -492,6 +486,7 @@ a {
 #content .aBtn {
     border-radius: 10px / 8px;
     transition: all .5s;
+    cursor: pointer;
 }
 #content .aBtn:hover {
     background: rgba(255,255,255,.5);
@@ -521,13 +516,14 @@ a {
     transform-origin: center center -15px;
     transform: rotateX(0deg);
 }
-h1 {
+#h1 {
     float: left;
     padding-top: 75px;
     overflow: hidden;
     width: 70px;
     height: 0;
     background: url("../images/h1.png") no-repeat 0 -8px / cover;
+    cursor: pointer;
 }
 #headNav {
     position: relative;
@@ -611,7 +607,7 @@ h1 {
     position: absolute;
     left: 50%;
     bottom: 30px;
-    margin-left: 15px;
+    margin-left: -15px;
     width: 30px;
     height: 32px;
     cursor: pointer;
@@ -1122,10 +1118,7 @@ h1 {
     margin-left: 130px;
     margin-top: -100px;
 }
-#page3.status1 .title img {
-    /*transform-origin: top left -100px;*/
-    transform: rotateX(5deg) rotateY(-45deg) scale(1.5);
-}
+
 #page3.status1 .title p {
     margin-top: 20px;
     font-weight: normal;
