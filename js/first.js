@@ -37,7 +37,7 @@ window.onload = function (){
         //星空转动
         var deg = -90;
         var starWind = document.getElementById('galaxy');
-        starWindRound(0.2,90);
+        starWindRound(0.2,-30);
 
         //鼠标移入,鼠标点击继续，显示背景图
         btn.addEventListener('mouseenter',function (){
