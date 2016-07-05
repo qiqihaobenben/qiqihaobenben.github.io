@@ -9,8 +9,81 @@
     <meta name="description" content="充分展示ajax和jsonp的数据交互，以及模板引擎的运用和bootstrap框架构建网站">
     <meta name="keywords" content="ajax,jsonp,模板引擎，bootstrap">
     <link rel="shortcut icon" href="images/favicon.ico" type="image\x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+<header id="header" class="jumbotron">
+    <div id="navBox">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="col-sm-4 col-xs-12 col-sm-offset-8">
+                    <div class="row">
+                        <a href="#" class="col-sm-3 col-xs-3 links">个人主页</a>
+                        <a href="#" class="col-sm-3 col-xs-3 links">响应式主页</a>
+                        <a href="#" class="col-sm-3 col-xs-3 links">移动端主页</a>
+                        <a href="#" class="col-sm-3 col-xs-3 links">电商demo</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>数据交互</h1>
+                <p>搜集免费接口和apistroe中的接口，实现简单的数据交互<br />
+                    样式使用bootstrap框架<br />
+                    业务代码使用arttemplate渲染
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 input-group" id="search">
+                    <input type="text" id="text" placeholder="简单搜索" class="form-control">
+                    <ul class="list-group list" id="searchList">
 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="content">
+    <div class="container">
+        <div class="row">
+            <aside class="col-md-4">
+                <div class="weather"></div>
+            </aside>
+            <main class="col-md-8">
+                <ul id="newsList">
+                    <li>
+                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
+                        <div class="message">
+                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
+                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
+                        <div class="message">
+                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
+                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
+                        <div class="message">
+                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
+                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
+                        </div>
+                    </li>
+                </ul>
+            </main>
+        </div>
+    </div>
+</section>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
