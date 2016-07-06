@@ -2,9 +2,9 @@
     font-family: 'chen';
     src: url("../fonts/glyphicons-halflings-regular.eot");
     src: url("../fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/glyphicons-halflings-regular.woff") format("woff"),
-        url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
-        url("../fonts/glyphicons-halflings-regular.svg#chen") format("svg");
+    url("../fonts/glyphicons-halflings-regular.woff") format("woff"),
+    url("../fonts/glyphicons-halflings-regular.ttf") format("truetype"),
+    url("../fonts/glyphicons-halflings-regular.svg#chen") format("svg");
     font-weight: normal;
     font-style: normal;
 }

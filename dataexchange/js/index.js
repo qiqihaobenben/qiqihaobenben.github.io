@@ -30,17 +30,61 @@ $(function (){
     });
 });
 window.onload = function (){
-    var curTime = new Date().getTime*1000;
-    $.ajax({
-        url:'http://api.1-blog.com/biz/bizserver/news/list.do',
-        dataType:'json',
-        data:{
-            max_behot_time: curTime,
-            size: 20
-        },
-        success: function (data){
-            console.log(data);
+    var off = false;
+    var curTime = new Date().getTime()*1000;
+    ajax();
+
+    window.onscroll = function (){
+        if(off){
+            //off = false;
+            console.log($('#newsList').height() ,window.pageYOffset)
+            if($('#newsList').height() <= window.innerHeight + window.pageYOffset){
+                ajax();
+            }
         }
-    })
+    };
+    function ajax(){
+        $.ajax({
+            url:'http://api.1-blog.com/biz/bizserver/news/list.do',
+            dataType:'json',
+            data:{
+                max_behot_time: curTime,
+                size: 20
+            },
+            success: function (data){
+                off = true;
+                time(data);
+                var html = template('news',data);
+                $('#newsList').append(html);
+            },
+            error: function (obj,status){
+                $('#nwsList').html('<li><h2>'+status+'</h2></li>');
+            }
+        })
+    }
+    function time(data){
+        for(var i = 0; i < data.detail.length; i++){
+            initTime(data.detail[i]['behot_time']);
+            if(i == data.detail.length-1){
+                curTime = data.detail[i]['behot_time'] - 1000;
+            }
+        }
+
+        function initTime(date){
+            var curdate = new Date(date);
+            var Years = curdate.getFullYear();
+            var Month = Double(curdate.getMonth()+1);
+            var Day = Double(curdate.getDate());
+            var Hours = Double(curdate.getHours());
+            var Minutes = Double(curdate.getMinutes());
+            var Seconds = Double(curdate.getSeconds());
+            data.detail[i]['time'] = Years+'年'+Month+'月'+Day+'日  '+Hours+':'+Minutes+':'+Seconds;
+            function Double(nub){
+                return nub = nub < 10?'0'+nub: ''+nub;
+            }
+            return date;
+        }
+    }
+
 };
 

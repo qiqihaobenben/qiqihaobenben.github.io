@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>数据交互</title>
+    <base target="_blank">
     <meta http-equiv="x-ua-compatible" content="IE=edge chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width initial-scale=1,user-scalable=no">
@@ -19,10 +20,10 @@
             <div class="container-fluid">
                 <div class="col-sm-4 col-xs-12 col-sm-offset-8">
                     <div class="row">
-                        <a href="#" class="col-sm-3 col-xs-3 links">个人主页</a>
-                        <a href="#" class="col-sm-3 col-xs-3 links">响应式主页</a>
-                        <a href="#" class="col-sm-3 col-xs-3 links">移动端主页</a>
-                        <a href="#" class="col-sm-3 col-xs-3 links">电商demo</a>
+                        <a href="../index.html" class="col-sm-3 col-xs-3 links">个人主页</a>
+                        <a href="../responsive/xiangyingshi_1feel.html" class="col-sm-3 col-xs-3 links">响应式主页</a>
+                        <a href="../moblie/xiachufang.html" class="col-sm-3 col-xs-3 links">移动端主页</a>
+                        <a href="../beaut/beaut.html" class="col-sm-3 col-xs-3 links">电商demo</a>
                     </div>
                 </div>
             </div>
@@ -56,34 +57,27 @@
             </aside>
             <main class="col-md-8">
                 <ul id="newsList">
-                    <li>
-                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
-                        <div class="message">
-                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
-                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
-                        <div class="message">
-                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
-                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <h2><a href="#" class="titleLink">台退役军官:导弹误射致战略吓阻 世界惊讶导弹如此优异</a></h2>
-                        <div class="message">
-                            <p><span class="laiyuan">环球网</span><span class="timeOut">2016-07-03 13:16:59</span></p>
-                            <p>赞<span class="up">0</span>踩<span class="down"></span>收藏<span class="star"></span></p>
-                        </div>
-                    </li>
+
                 </ul>
             </main>
         </div>
     </div>
 </section>
+<script id="news" type="text/html">
+    {{each detail as value index}}
+    <li>
+        <h2><a href="{{value.article_url}}" class="titleLink">{{value.title}}</a></h2>
+        <div class="message">
+            <p><span class="laiyuan">{{value.source}}</span><span class="timeOut">{{value.time}}</span></p>
+            <p>赞<span class="up">{{value.digg_count}}</span>踩<span class="down">{{value.bury_count}}</span>收藏<span
+                    class="star">{{value.repin_count}}</span></p>
+        </div>
+    </li>
+    {{/each}}
+</script>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/template.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
