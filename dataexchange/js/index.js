@@ -45,7 +45,7 @@ window.onload = function (){
     };
     function ajax(){
         $.ajax({
-            url:'http://api.1-blog.com/biz/bizserver/news/list.do',
+            url:'https://api.1-blog.com/biz/bizserver/news/list.do',
             dataType:'json',
             data:{
                 max_behot_time: curTime,
