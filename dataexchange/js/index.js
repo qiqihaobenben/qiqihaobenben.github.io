@@ -7,7 +7,7 @@ function baidu(data){
         str += '<li class="list-group-item">'+ele+'</li>';
     });
     $('#searchList').html(str);
-    $('#sc').remove();
+    //$('#sc').remove();
 
 }
 $(function (){
