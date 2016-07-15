@@ -20,7 +20,7 @@ $(function (){
     });
     $('#text').on('keyup',function (){
         if($(this).val()){
-            var $sc = $('<script></script>');
+            var $sc = $('<script type="text/javascript"></script>');
             var str = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+$(this).val()+'&json=1&p=3&sid=1434_18203_20515_18240_20536_17944_20538_20415_20455_19861_17001_15168_11815&req=2&bs=%E8%A5%BF%E4%BA%8C%E6%97%97%E5%A4%96%E5%8C%85%E5%85%AC%E5%8F%B8&pbs=%E8%A5%BF%E4%BA%8C%E6%97%97%E5%A4%96%E5%8C%85%E5%85%AC%E5%8F%B8&csor=1&cb=baidu';
             $sc.attr({'src':str,'id':'sc'});
             $('body').append($sc);
