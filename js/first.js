@@ -13,10 +13,10 @@ window.onload = function (){
     var h = window.innerHeight;
     var loading = document.getElementById('loading');
     var start= document.getElementById('start');
-    var straBox = document.getElementById('galaxyBox');
-    var change = document.getElementById('change');
-    var btn = change.children[0];
-    var bs = btn.children;
+    // var straBox = document.getElementById('galaxyBox');
+    // var change = document.getElementById('change');
+    // var btn = change.children[0];
+    // var bs = btn.children;
     var cover = document.getElementById('cover');
     var text = document.getElementById('content');
     var aBtn = text.getElementsByClassName('aBtn')[0];
@@ -28,7 +28,7 @@ window.onload = function (){
             clearTimeout(loading.timer);
         },1000);
     //判断浏览器是不是IE，如果是IE取消星空转动效果
-    var user = window.navigator.userAgent.toLowerCase();
+    /* var user = window.navigator.userAgent.toLowerCase();
     if(user.indexOf('trident') != -1 ){
         straBox.style.display = "none";
         change.style.display = "none";
@@ -67,7 +67,8 @@ window.onload = function (){
         var arr = [];
         //timer每5s出现一次星星
         canvas.timer = setInterval(drawStar,5000);
-    }
+    } */
+    text.style.display = "block";
 
     //点击出现流星，流星划过后，背景图渐隐，首页出现
     aBtn.addEventListener('click',function(){
