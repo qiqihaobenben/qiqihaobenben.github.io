@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>居中布局</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0 auto;
+            width: 1200px;
+            font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif; 
+        }
+        h2, 
+        h3, 
+        h4 {
+            text-align: center;
+        }
+        .box {
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .container-left {
+            float: left;
+            width: 800px;
+        }
+        .container-right {
+            float: left;
+            padding-top: 60px;
+            width: 300px;
+        }
+        .container-right img {
+            width: 100%;
+        }
+        .container {
+            margin: 0 auto;
+            width: 600px;
+            height: 400px;
+            border: 2px solid #666;
+        }
+        .item {
+            background-color: #8c7676;
+        }
+
+        .container-one {
+            position: relative;
+        }
+        .item-one {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .container-two {
+            position: relative;
+        }
+        .item-two {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+        }
+
+        .container-three {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .item-three {
+            display: inline-block;
+            padding: 100px;
+        }
+
+        .container-four {
+            position: relative;
+        }
+        .item-four {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 100px;
+        }
+
+        .container-five {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-five {
+            display: inline-block;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>子元素定宽高</h2>
+    <!-- absolute + margin负值 -->
+    <div class="box">
+        <div class="container-left">
+            <h4>absolute + margin负值</h4>
+            <div class="container container-one">
+                <span class="item item-one"></span>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="../src/img/1.png" >
+        </div>
+    </div>
+    <!-- absolute(left,right,top,bottom) + margin + width + height -->
+    <div class="box">
+        <div class="container-left">
+            <h4>absolute(left,right,top,bottom) + margin + width + height</h4>
+            <div class="container container-two">
+                <span class="item item-two"></span>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="../src/img/2.png">
+        </div>
+    </div>
+    <!-- display: table-cell; -->
+    <div class="box">
+        <div class="container-left">
+            <h4>display: table-cell;</h4>
+            <div class="container container-three">
+                <span class="item item-three"></span>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="../src/img/3.png">
+        </div>
+    </div>
+    <!-- absolute + transform -->
+    <div class="box">
+        <div class="container-left">
+            <h4>absolute + transform</h4>
+            <div class="container container-four">
+                <span class="item item-four"></span>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="../src/img/4.png">
+        </div>
+    </div>
+    <!-- display:flex; -->
+    <div class="box">
+        <div class="container-left">
+            <h4>display:flex;</h4>
+            <div class="container container-five">
+                <span class="item item-five"></span>
+            </div>
+        </div>
+        <div class="container-right">
+            <img src="../src/img/5.png">
+        </div>
+    </div>
+</body>
+</html>
